@@ -3,11 +3,15 @@
 const Controller = require('egg').Controller;
 
 const createRule = {
-  name: 'string?',
-  idcard:'string'
+  funName: 'string', //功能名称
+  machineId:'string', //机器id
+  useTime:'dateTime?', //使用时间
+  userName:'string?', //用户名
+  stayTime:'string?', //功能停留时间
 };
 
-class UserController extends Controller {
+
+class FunCountController extends Controller {
   async index() {
     const ctx = this.ctx;
     const query = {
@@ -39,4 +43,4 @@ class UserController extends Controller {
   }
 }
 
-module.exports = UserController;
+module.exports = FunCountController;

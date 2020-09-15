@@ -2,7 +2,7 @@
 
 const Service = require('egg').Service;
 
-class User extends Service {
+class FunCount extends Service {
   async list({ offset = 0, limit = 10 }) {
     return this.ctx.model.User.findAndCountAll({
       offset,
@@ -43,4 +43,4 @@ class User extends Service {
 
 }
 
-module.exports = User;
+module.exports = FunCount;

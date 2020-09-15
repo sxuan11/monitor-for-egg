@@ -10,5 +10,6 @@ module.exports = app => {
   router.post('/user', jwt, controller.login.login.index);
   // router.resources('users', '/users', controller.user.userinfo);
   app.resources('users', '/users', app.controller.user.user);
+  app.resources('funCount', '/funCount', app.controller.funCount.funCount);
   // router.resources('login', '/user/login', controller.login.login.login);
 };

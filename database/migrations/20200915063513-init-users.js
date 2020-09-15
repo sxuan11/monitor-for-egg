@@ -12,7 +12,7 @@ module.exports = {
     await queryInterface.createTable('users', {
       id: { type: INTEGER, primaryKey: true, autoIncrement: true },
       name: STRING(30),
-      idcard: INTEGER,
+      idcard: STRING(30),
       created_at: DATE,
       updated_at: DATE,
     });

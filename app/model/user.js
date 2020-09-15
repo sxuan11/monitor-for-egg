@@ -10,7 +10,8 @@ module.exports = app => {
       autoIncrement: true,
     },
     name: STRING(30),
-    age: INTEGER,
+    idcard: STRING(30),
+    token: STRING(255),
     created_at: DATE,
     updated_at: DATE,
   });

@@ -34,24 +34,25 @@ module.exports = appInfo => {
         database: 'shujishouji',
       },
     },
-    onerror: {
-      html(err, ctx) {
-        // html hander
-        ctx.body = '<h3>error</h3>';
-        ctx.status = 500;
-      },
-      json(err, ctx) {
-        // json hander
-        ctx.body = { message: 'error' };
-        ctx.status = 500;
-      },
-    },
+    // onerror: {
+    //   html(err, ctx) {
+    //     // html hander
+    //     ctx.body = '<h3>error</h3>';
+    //     ctx.status = 500;
+    //   },
+    //   json(err, ctx) {
+    //     // json hander
+    //     ctx.body = { message: 'error' };
+    //     ctx.status = 500;
+    //   },
+    // },
     sequelize : {
       dialect: 'mysql',
       host: '127.0.0.1',
       port: 3306,
       database: 'shujishouji',
       password: 'sxuan',
+      timezone: '+08:00' // 保存为本地时区
     }
   };
 
