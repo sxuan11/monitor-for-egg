@@ -1,3 +1,4 @@
+// eslint-disable-next-line strict
 module.exports = () => {
   return async function notFoundHandler(ctx, next) {
     await next();

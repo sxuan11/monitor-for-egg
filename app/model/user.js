@@ -12,6 +12,9 @@ module.exports = app => {
     name: STRING(30),
     idcard: STRING(30),
     token: STRING(255),
+    login_mode : STRING(255),
+    terminalid:STRING(255),
+    hisuserid:STRING(255),
     created_at: DATE,
     updated_at: DATE,
   });

@@ -1,3 +1,4 @@
+// eslint-disable-next-line strict
 module.exports = () => {
   return async function(ctx, next) {
     const startTime = Date.now();

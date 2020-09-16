@@ -3,11 +3,11 @@
 const Controller = require('egg').Controller;
 
 const createRule = {
-  funName: 'string', //功能名称
-  machineId:'string', //机器id
-  useTime:'dateTime?', //使用时间
-  userName:'string?', //用户名
-  stayTime:'string?', //功能停留时间
+  funName: 'string', // 功能名称
+  machineId: 'string', // 机器id
+  useTime: 'dateTime?', // 使用时间
+  userName: 'string?', // 用户名
+  stayTime: 'string?', // 功能停留时间
 };
 
 

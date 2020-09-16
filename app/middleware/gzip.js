@@ -1,3 +1,4 @@
+// eslint-disable-next-line strict
 const isJSON = require('koa-is-json');
 const zlib = require('zlib');
 

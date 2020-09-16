@@ -62,15 +62,20 @@ module.exports = appInfo => {
   // add your middleware config here
   // config.middleware = [];
   config.security = {
-    csrf: false,
+    csrf: {
+      enable: false
+    },
+    domainWhiteList: [ '*' ],
   };
 
   config.jwt = {
-    secret: '123456',
+    secret: 'sxuan',
   };
 
   config.cors = {
     origin: '*',
+    allowHeaders : '*',
+    exposeHeaders: '*',
     allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH',
   };
 

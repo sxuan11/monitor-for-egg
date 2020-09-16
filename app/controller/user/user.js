@@ -4,7 +4,8 @@ const Controller = require('egg').Controller;
 
 const createRule = {
   name: 'string?',
-  idcard:'string'
+  login_mode:'string',
+  idcard: 'string',
 };
 
 class UserController extends Controller {
