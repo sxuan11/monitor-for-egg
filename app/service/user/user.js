@@ -21,11 +21,10 @@ class User extends Service {
   }
 
   async create(user) {
-    console.log(user,'user');
     const {app} = this
     const findUser = await this.ctx.model.User.findOne({ where: {idcard:user.idcard} })
     let newUser = ''
-    const token = app.jwt.sign({name: user.name,}, app.config.jwt.secret);
+    const token = `Bearer ` + app.jwt.sign({name: user.name,idcard: user.idcard}, app.config.jwt.secret);
     newUser = { token,terminalid:this.ctx.header.terminalid ,hisuserid:this.ctx.header.hisuserid,...user }
     if(findUser){
       return findUser.update(newUser);

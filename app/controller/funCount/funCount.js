@@ -3,11 +3,11 @@
 const Controller = require('egg').Controller;
 
 const createRule = {
-  funName: 'string', // 功能名称
-  machineId: 'string', // 机器id
-  useTime: 'dateTime?', // 使用时间
-  userName: 'string?', // 用户名
-  stayTime: 'string?', // 功能停留时间
+  fun_name: 'string', // 功能名称
+  // machineId: 'string', // 机器id
+  use_time: 'dateTime?', // 使用时间
+  is_effect : 'string', //功能是否有效，0是无效，1是有效
+  stay_time: 'string?', // 功能停留时间
 };
 
 
@@ -18,19 +18,19 @@ class FunCountController extends Controller {
       limit: ctx.helper.parseInt(ctx.query.limit),
       offset: ctx.helper.parseInt(ctx.query.offset),
     };
-    ctx.body = await ctx.service.user.user.list(query);
+    ctx.body = await ctx.service.funCount.funCount.list(query);
   }
 
   async show() {
     const ctx = this.ctx;
-    ctx.body = await ctx.service.user.user.find(ctx.helper.parseInt(ctx.params.id));
+    ctx.body = await ctx.service.funCount.funCount.find(ctx.helper.parseInt(ctx.params.id));
   }
 
   async create() {
     const ctx = this.ctx;
     const data = ctx.request.body;
     ctx.validate(createRule, data);
-    const user = await ctx.service.user.user.create(data);
+    const user = await ctx.service.funCount.funCount.create(data);
     ctx.status = 201;
     ctx.body = user;
   }
@@ -39,7 +39,7 @@ class FunCountController extends Controller {
     const ctx = this.ctx;
     const id = ctx.helper.parseInt(ctx.params.id);
     const body = ctx.request.body;
-    ctx.body = await ctx.service.user.user.update({ id, updates: body });
+    ctx.body = await ctx.service.funCount.funCount.update({ id, updates: body });
   }
 }
 
