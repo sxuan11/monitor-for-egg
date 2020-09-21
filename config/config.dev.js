@@ -24,7 +24,16 @@ module.exports = appInfo => {
         // 数据库名
         database: 'shujushouji',
       },
+      sequelize : {
+        dialect: 'mysql',
+        host: '127.0.0.1',
+        port: 3306,
+        database: 'shujushouji',
+        password: 'sxuan',
+        timezone: '+08:00' // 保存为本地时区
+      }
     },
+
 
   return {
     ...config,

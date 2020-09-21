@@ -46,14 +46,14 @@ module.exports = appInfo => {
     //     ctx.status = 500;
     //   },
     // },
-    sequelize : {
-      dialect: 'mysql',
-      host: '127.0.0.1',
-      port: 3306,
-      database: 'shujishouji',
-      password: 'sxuan',
-      timezone: '+08:00' // 保存为本地时区
-    }
+    // sequelize : {
+    //   dialect: 'mysql',
+    //   host: '127.0.0.1',
+    //   port: 3306,
+    //   database: 'shujushouji',
+    //   password: 'sxuan',
+    //   timezone: '+08:00' // 保存为本地时区
+    // }
   };
 
   // use for cookie sign key, should change to your own and keep security
