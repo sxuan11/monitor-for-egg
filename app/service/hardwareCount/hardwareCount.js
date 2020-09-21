@@ -4,7 +4,7 @@ const Service = require('egg').Service;
 
 class ServerCount extends Service {
   async list({ offset = 0, limit = 10 }) {
-    return this.ctx.model.ServerCount.findAndCountAll({
+    return this.ctx.model.Hardware.findAndCountAll({
       offset,
       limit,
       order: [[ 'created_at', 'desc' ], [ 'id', 'desc' ]],
@@ -13,7 +13,7 @@ class ServerCount extends Service {
 
   async find(idcard) {
     // const user = await this.ctx.model.User.findByPk(id);
-    const user = await this.ctx.model.ServerCount.findOne({ where: { idcard } });
+    const user = await this.ctx.model.Hardware.findOne({ where: { idcard } });
     if (!user) {
       this.ctx.throw(404, '未查询记录');
     }
@@ -32,11 +32,11 @@ class ServerCount extends Service {
       machine_id: machine_id || '999',
       ...info
     }
-    return this.ctx.model.ServerCount.create(newInfo);
+    return this.ctx.model.Hardware.create(newInfo);
   }
 
   async update({ id, updates }) {
-    const user = await this.ctx.model.ServerCount.findByPk(id);
+    const user = await this.ctx.model.Hardware.findByPk(id);
     if (!user) {
       this.ctx.throw(404, 'user not found');
     }

@@ -4,7 +4,7 @@ const Controller = require('egg').Controller;
 
 const createRule = {
   hardware: 'string', // 功能名称
-  err_msg: 'dateTime?', // 使用时间
+  err_msg: 'string?', // 使用时间
 };
 
 
