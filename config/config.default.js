@@ -20,20 +20,20 @@ module.exports = appInfo => {
       jsonLimit: '1mb',
       formLimit: '1mb',
     },
-    mysql: {
-      client: {
-        // host
-        host: '127.0.0.1',
-        // 端口号
-        port: '3306',
-        // 用户名
-        user: 'root',
-        // 密码
-        password: 'sxuan',
-        // 数据库名
-        database: 'shujishouji',
-      },
-    },
+    // mysql: {
+    //   client: {
+    //     // host
+    //     host: '127.0.0.1',
+    //     // 端口号
+    //     port: '3306',
+    //     // 用户名
+    //     user: 'root',
+    //     // 密码
+    //     password: 'sxuan',
+    //     // 数据库名
+    //     database: 'shujishouji',
+    //   },
+    // },
     // onerror: {
     //   html(err, ctx) {
     //     // html hander
