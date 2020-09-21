@@ -12,5 +12,6 @@ module.exports = app => {
   app.resources('users', '/users', app.controller.user.user);
   app.resources('funCount', '/funCount',jwt, app.controller.funCount.funCount);
   app.resources('serverCount', '/serverCount', app.controller.serverCount.serverCount);
+  app.resources('hardwareCount', '/hardwareCount', app.controller.hardwareCount.hardwareCount);
   // router.resources('login', '/user/login', controller.login.login.login);
 };

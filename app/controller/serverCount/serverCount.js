@@ -30,7 +30,7 @@ class ServerCountController extends Controller {
     const ctx = this.ctx;
     const data = ctx.request.body;
     console.log(data,'data');
-    // ctx.validate(createRule, data);
+    ctx.validate(createRule, data);
     const user = await ctx.service.serverCount.serverCount.create(data);
     ctx.status = 201;
     ctx.body = user;
