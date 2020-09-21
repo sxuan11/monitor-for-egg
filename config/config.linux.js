@@ -24,5 +24,10 @@ module.exports = {
     database: 'shujushouji',
     password: 'root',
     timezone: '+08:00' // 保存为本地时区
+  },
+  alinode : {
+    // 从 `Node.js 性能平台` 获取对应的接入参数
+    appid: '86225',
+    secret: '037dded8080d7648321abc143af9dc6475b10fe8',
   }
 };
