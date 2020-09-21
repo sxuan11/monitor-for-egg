@@ -26,8 +26,8 @@ module.exports = {
     enable: true,
     package: 'egg-sequelize',
   },
-  alinode : {
-    enable: true,
-    package: 'egg-alinode',
-  }
+  // alinode : {
+  //   enable: true,
+  //   package: 'egg-alinode',
+  // }
 };

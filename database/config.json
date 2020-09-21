@@ -2,21 +2,21 @@
   "development": {
     "username": "root",
     "password": "sxuan",
-    "database": "shujishouji",
+    "database": "shujushouji",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "sxuan",
-    "database": "shujishouji",
+    "password": "root",
+    "database": "shujushouji",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
     "password": "sxuan",
-    "database": "shujishouji",
+    "database": "shujushouji",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }

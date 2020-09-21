@@ -37,7 +37,7 @@
     "start_linux": "egg-scripts start --env=linux --daemon --title=egg-server-shuju",
     "start_dev": "egg-scripts start --env=dev --daemon --title=egg-server-shuju",
     "stop": "egg-scripts stop --title=egg-server-shuju",
-    "dev": "egg-bin dev --env=dev --port 3030",
+    "dev": "egg-bin dev --port 3030",
     "debug": "egg-bin debug",
     "test": "npm run lint -- --fix && npm run test-local",
     "test-local": "egg-bin test",

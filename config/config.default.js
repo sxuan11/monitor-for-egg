@@ -20,20 +20,28 @@ module.exports = appInfo => {
       jsonLimit: '1mb',
       formLimit: '1mb',
     },
-    // mysql: {
-    //   client: {
-    //     // host
-    //     host: '127.0.0.1',
-    //     // 端口号
-    //     port: '3306',
-    //     // 用户名
-    //     user: 'root',
-    //     // 密码
-    //     password: 'sxuan',
-    //     // 数据库名
-    //     database: 'shujishouji',
-    //   },
-    // },
+    mysql: {
+      client: {
+        // host
+        host: '127.0.0.1',
+        // 端口号
+        port: '3306',
+        // 用户名
+        user: 'root',
+        // 密码
+        password: 'sxuan',
+        // 数据库名
+        database: 'shujushouji',
+      },
+    },
+    sequelize : {
+      dialect: 'mysql',
+      host: '127.0.0.1',
+      port: 3306,
+      database: 'shujushouji',
+      password: 'sxuan',
+      timezone: '+08:00' // 保存为本地时区
+    }
     // onerror: {
     //   html(err, ctx) {
     //     // html hander
@@ -46,14 +54,7 @@ module.exports = appInfo => {
     //     ctx.status = 500;
     //   },
     // },
-    // sequelize : {
-    //   dialect: 'mysql',
-    //   host: '127.0.0.1',
-    //   port: 3306,
-    //   database: 'shujushouji',
-    //   password: 'sxuan',
-    //   timezone: '+08:00' // 保存为本地时区
-    // }
+
   };
 
   // use for cookie sign key, should change to your own and keep security
