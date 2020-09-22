@@ -20,8 +20,8 @@ class AdminUserController extends Controller {
       ctx.status = 200;
       ctx.body = { code: 200, message: '登录成功', result:{token}};
     } else {
-      ctx.status = 403;
-      ctx.body = { code: 400, message: '登录失败' };
+      ctx.status = 401;
+      ctx.body = { code: 401, message: '登录失败,请确认用户名或密码' };
     }
   }
   // 获取所有用户
