@@ -16,9 +16,9 @@ class AdminUserController extends Controller {
     // 判断该用户是否存在并且密码是否正确
     const isValidUser = await ctx.service.home.adminUser.index.validUser(data.user_name, data.password);
     if (isValidUser) {
-      const token = app.jwt.sign({ user_name: data.user_name }, app.config.jwt.secret);
+      const token = `Bearer ` + app.jwt.sign({ user_name: data.user_name }, app.config.jwt.secret);
       ctx.status = 200;
-      ctx.body = { code: 200, message: '登录成功', result:{token}};
+      ctx.body = { code: 200, message: '登录成功', result:{token,user_name:data.user_name}};
     } else {
       ctx.status = 401;
       ctx.body = { code: 401, message: '登录失败,请确认用户名或密码' };

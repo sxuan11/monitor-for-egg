@@ -20,4 +20,5 @@ module.exports = app => {
   router.get('/adminUser/:id', jwt, controller.home.adminUser.index.show);
   router.get('/adminUser/getMd5/:data', controller.home.adminUser.index.getMd5Data);
   router.get('/rsa', controller.home.adminUser.rsa.getRsa);
+  router.post('/adminUserInfo',jwt, controller.home.adminUser.userInfo.show);
 };

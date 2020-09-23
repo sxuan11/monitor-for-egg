@@ -35,7 +35,7 @@ class AdminUserService extends Service {
     // const data = await this.getUser();
     // let data = encrypt('123')
     let result = decrypt(password)
-    const userpwd = await  ctx.model.AdminUsers.findOne({ where: {user_name}})
+    const userpwd = await ctx.model.AdminUsers.findOne({ where: {user_name}})
     if (userpwd){
       let result2 = decrypt(userpwd.password)
       if(result === result2){
