@@ -5,8 +5,9 @@ const Controller = require('egg').Controller;
 const createRule = {
   res_code: 'string?', // 响应状态
   res_message: 'string?', // 响应消息
-  res_data: 'string?', // 响应数据
-  req : 'string', //请求数据
+  res_data: 'object?', // 响应数据
+  res:'object?',
+  req : 'object', //请求数据
   use_time: 'string?', // 花费请求的时间
 };
 

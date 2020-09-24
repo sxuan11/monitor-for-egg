@@ -32,6 +32,7 @@ class ServerCount extends Service {
       machine_id: machine_id || '999',
       ...info
     }
+    console.log(newInfo,'newInfo');
     return this.ctx.model.ServerCount.create(newInfo);
   }
 
