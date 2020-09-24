@@ -12,7 +12,7 @@ module.exports = {
       // 用户名
       user: 'root',
       // 密码
-      password: 'root',
+      password: 'Sxuan123@sxuan',
       // 数据库名
       database: 'shujushouji',
     },
@@ -22,7 +22,7 @@ module.exports = {
     host: '127.0.0.1',
     port: 3306,
     database: 'shujushouji',
-    password: 'root',
+    password: 'Sxuan123@sxuan',
     timezone: '+08:00' // 保存为本地时区
   },
   alinode : {
