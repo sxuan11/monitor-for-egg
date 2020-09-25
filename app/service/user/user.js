@@ -1,6 +1,8 @@
 'use strict';
 
+const Sequelize  = require("sequelize");
 const Service = require('egg').Service;
+let Op = Sequelize.Op;
 
 class User extends Service {
   async list({ offset = 0, limit = 10 }) {
@@ -18,6 +20,14 @@ class User extends Service {
       this.ctx.throw(404, '未查询到该用户');
     }
     return user;
+  }
+
+  async findByDate({ date ,offset = 0, limit = 0 }) {
+    console.log(date);
+    const allUser = await this.ctx.model.User.findAndCountAll({ where: {created_at: {[Op.gte] :date}} ,
+      offset,
+      })
+    return allUser;
   }
 
   async create(user) {

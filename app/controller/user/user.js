@@ -23,6 +23,16 @@ class UserController extends Controller {
     ctx.body = await ctx.service.user.user.find(ctx.helper.parseInt(ctx.params.id));
   }
 
+  async new() {
+    const ctx = this.ctx;
+    const query = {
+      limit: ctx.helper.parseInt(ctx.query.limit),
+      offset: ctx.helper.parseInt(ctx.query.offset),
+      date:ctx.query.date
+    };
+    ctx.body = await ctx.service.user.user.findByDate(query);
+  }
+
   async create() {
     const ctx = this.ctx;
     const data = ctx.request.body;

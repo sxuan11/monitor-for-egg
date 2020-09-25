@@ -21,4 +21,10 @@ module.exports = app => {
   router.get('/adminUser/getMd5/:data', controller.home.adminUser.index.getMd5Data);
   router.get('/rsa', controller.home.adminUser.rsa.getRsa);
   router.post('/adminUserInfo',jwt, controller.home.adminUser.userInfo.show);
+
+  //analysis
+  router.post('/analysis/allUser', jwt , controller.home.analysis.index.findAllUser);
+  router.post('/analysis/allFun' , jwt , controller.home.analysis.index.findAllFun);
+  router.post('/analysis/allHardware' , jwt , controller.home.analysis.index.findAllHardware);
+  router.post('/analysis/allServer'  , jwt , controller.home.analysis.index.findAllServer);
 };
