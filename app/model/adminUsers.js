@@ -10,7 +10,7 @@ module.exports = app => {
       autoIncrement: true,
     },
     role: STRING(255),
-    user_name:STRING(255),
+    user_name:{ type: STRING(255), primaryKey: true},
     password: STRING(255),
     email: STRING(255),
     phone: STRING(255),

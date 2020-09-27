@@ -27,4 +27,5 @@ module.exports = app => {
   router.post('/analysis/allFun' , jwt , controller.home.analysis.index.findAllFun);
   router.post('/analysis/allHardware' , jwt , controller.home.analysis.index.findAllHardware);
   router.post('/analysis/allServer'  , jwt , controller.home.analysis.index.findAllServer);
+  router.post('/usercenter/adduser'  , jwt , controller.home.userCenter.userManage.index.AddUser);
 };

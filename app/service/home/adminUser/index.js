@@ -13,7 +13,7 @@ function toInt(str) {
 }
 
 function encrypt(data) {
-  const publicKey = fs.readFileSync(path.join(__dirname, "/rsa_public_key.pem"));
+  const publicKey = fs.readFileSync(path.join(__dirname, "../../../../config/rsa_public_key.pem"));
   const nodersa = new NodeRSA(publicKey);
 // nodersa.setOptions({ encryptionScheme: 'pkcs1' });
   const encrypted = nodersa.encrypt(data, 'base64');
@@ -21,7 +21,7 @@ function encrypt(data) {
 }
 
 function decrypt(data) {
-  const privateKey = fs.readFileSync(path.join(__dirname, "/rsa_private.pem"));
+  const privateKey = fs.readFileSync(path.join(__dirname, "../../../../config/rsa_private.pem"));
   const rsa = new NodeRSA(privateKey, 'pkcs8-private-pem', {encryptionScheme: 'pkcs1'})
   const decrypted = rsa.decrypt(data, 'utf8');
   return decrypted;

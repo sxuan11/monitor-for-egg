@@ -109,6 +109,16 @@ class Analysis extends Service {
       counts: 0,
       is_effect: '完成使用'
     }
+    let soc_pay0 = {
+      fun_name: '社保支付',
+      counts: 0,
+      is_effect: '总次数'
+    }
+    let soc_pay1 = {
+      fun_name: '社保支付',
+      counts: 0,
+      is_effect: '完成使用'
+    }
     let print0 = {
       fun_name: '自助打印',
       counts: 0,
@@ -116,6 +126,26 @@ class Analysis extends Service {
     }
     let print1 = {
       fun_name: '自助打印',
+      counts: 0,
+      is_effect: '完成使用'
+    }
+    let daily_list0 = {
+      fun_name: '住院清单',
+      counts: 0,
+      is_effect: '总次数'
+    }
+    let daily_list1 = {
+      fun_name: '住院清单',
+      counts: 0,
+      is_effect: '完成使用'
+    }
+    let zhuyuan_pay0 = {
+      fun_name: '住院缴费',
+      counts: 0,
+      is_effect: '总次数'
+    }
+    let zhuyuan_pay1 = {
+      fun_name: '住院缴费',
       counts: 0,
       is_effect: '完成使用'
     }
@@ -149,6 +179,13 @@ class Analysis extends Service {
             menzhen_pay1.counts++
           }
           break;
+        case "soc_pay":
+          if (item.is_effect === '0') {
+            soc_pay0.counts++
+          } else {
+            soc_pay1.counts++
+          }
+          break;
         case "print":
           if (item.is_effect === '0') {
             print0.counts++
@@ -156,11 +193,26 @@ class Analysis extends Service {
             print1.counts++
           }
           break;
+        case "zhuyuan_pay":
+          if (item.is_effect === '0') {
+            zhuyuan_pay0.counts++
+          } else {
+            zhuyuan_pay1.counts++
+          }
+          break;
+        case "daily_list":
+          if (item.is_effect === '0') {
+            daily_list0.counts++
+          } else {
+            daily_list1.counts++
+          }
+          break;
         default:
           break;
       }
     }
-    column.push(guahao0, guahao1, menzhen_pay0, menzhen_pay1, print0, print1, QR_signup0, QR_signup1, face_edit0, face_edit1)
+    column.push(guahao0, guahao1, menzhen_pay0, menzhen_pay1 ,soc_pay0,soc_pay1, print0, print1, QR_signup0, QR_signup1, face_edit0, face_edit1
+    ,daily_list0,daily_list1,zhuyuan_pay0,zhuyuan_pay1)
     allFun.column = column
     delete (allFun["rows"]);
     return allFun
