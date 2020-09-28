@@ -53,6 +53,16 @@ class AnalysisController extends Controller {
     ctx.body = await ctx.service.home.analysis.index.findServerByDate(body);
   }
 
+  async findAllJsErr(){
+    const ctx = this.ctx;
+    const data = ctx.request.body
+    ctx.validate(createRule, data);
+    const body = {
+      offset: ctx.helper.parseInt(ctx.request.body.offset),
+      date:ctx.request.body.date
+    };
+    ctx.body = await ctx.service.home.analysis.index.findJsByDate(body);
+  }
 }
 
 module.exports = AnalysisController;

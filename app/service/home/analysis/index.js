@@ -26,8 +26,12 @@ class Analysis extends Service {
       type: '人脸识别',
       counts: 0
     }
-    let NUM_INPUT = {
-      type: '卡号输入',
+    let NUM_INPUT_IDCARD = {
+      type: '身份证输入',
+      counts: 0
+    }
+    let NUM_INPUT_NUM = {
+      type: '就诊卡输入',
       counts: 0
     }
     let QR_CODE = {
@@ -45,8 +49,11 @@ class Analysis extends Service {
         case "FACE":
           FACE.counts++;
           break;
-        case "NUM_INPUT":
-          NUM_INPUT.counts++;
+        case "NUM_INPUT_IDCARD":
+          NUM_INPUT_IDCARD.counts++;
+          break;
+        case "NUM_INPUT_NUM":
+          NUM_INPUT_NUM.counts++;
           break;
         case "QR_CODE":
           QR_CODE.counts++;
@@ -55,7 +62,7 @@ class Analysis extends Service {
           break;
       }
     }
-    column.push(ID_CARD, SOC_CARD, FACE, NUM_INPUT, QR_CODE)
+    column.push(ID_CARD, SOC_CARD, FACE, NUM_INPUT_IDCARD, NUM_INPUT_NUM, QR_CODE)
     allUser.column = column
     delete (allUser["rows"]);
     return allUser;
@@ -211,8 +218,8 @@ class Analysis extends Service {
           break;
       }
     }
-    column.push(guahao0, guahao1, menzhen_pay0, menzhen_pay1 ,soc_pay0,soc_pay1, print0, print1, QR_signup0, QR_signup1, face_edit0, face_edit1
-    ,daily_list0,daily_list1,zhuyuan_pay0,zhuyuan_pay1)
+    column.push(guahao0, guahao1, menzhen_pay0, menzhen_pay1, soc_pay0, soc_pay1, print0, print1, QR_signup0, QR_signup1, face_edit0, face_edit1
+      , daily_list0, daily_list1, zhuyuan_pay0, zhuyuan_pay1)
     allFun.column = column
     delete (allFun["rows"]);
     return allFun
@@ -324,11 +331,11 @@ class Analysis extends Service {
       for (let item of allServer.rows) {
         if (item.req.request_url === value.type) {
           if (item.res_code == 200) {
-            if(value.success === '成功'){
+            if (value.success === '成功') {
               value.counts++
             }
           } else {
-            if(value.success === '失败'){
+            if (value.success === '失败') {
               value.counts++
             }
           }
@@ -338,6 +345,40 @@ class Analysis extends Service {
     allServer.column = ghlArr
     delete (allServer["rows"]);
     return allServer;
+  }
+
+  async findJsByDate({date, offset = 0, limit = 0}) {
+    let tomorrow = moment(date).add(1, 'days').format('YYYY-MM-DD');
+    let allJs = await this.ctx.model.JsErrs.findAndCountAll({
+      where: {created_at: {[Op.gte]: date, [Op.lte]: tomorrow}},
+      offset,
+    })
+    let tempArr = []
+    //获取数组
+    for (let item of allJs.rows) {
+      tempArr.push(item.err_msg)
+    }
+    //去重
+    let abcArr = Array.from(new Set(tempArr));
+    //生产变量
+    let defArr = []
+    for (let item of abcArr) {
+      let itemInfo = {
+        type: item,
+        counts: 0,
+      }
+      defArr.push(itemInfo)
+    }
+    for(let item of allJs.rows){
+      for(let item2 of defArr){
+        if(item.err_msg === item2.type){
+          item2.counts++
+        }
+      }
+    }
+    allJs.column = defArr
+    delete (allJs["rows"]);
+    return allJs;
   }
 
 }

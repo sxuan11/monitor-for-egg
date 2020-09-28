@@ -13,6 +13,7 @@ module.exports = app => {
   app.resources('funCount', '/funCount',jwt, controller.funCount.funCount);
   app.resources('serverCount', '/serverCount',controller.serverCount.serverCount);
   app.resources('hardwareCount', '/hardwareCount', controller.hardwareCount.hardwareCount);
+  app.resources('jsErr', '/jsErr', controller.jsErr.jsErr);
   // router.resources('login', '/user/login', controller.login.login.login);
 
   router.post('/adminUser/login', controller.home.adminUser.index.login);
@@ -27,5 +28,9 @@ module.exports = app => {
   router.post('/analysis/allFun' , jwt , controller.home.analysis.index.findAllFun);
   router.post('/analysis/allHardware' , jwt , controller.home.analysis.index.findAllHardware);
   router.post('/analysis/allServer'  , jwt , controller.home.analysis.index.findAllServer);
+  router.post('/analysis/allJserr'  , jwt , controller.home.analysis.index.findAllJsErr);
+
+
+  //account
   router.post('/usercenter/adduser'  , jwt , controller.home.userCenter.userManage.index.AddUser);
 };
