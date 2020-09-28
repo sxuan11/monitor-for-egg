@@ -14,7 +14,6 @@ class AdminUserinfo extends Service {
   async find(user_name) {
     // const user = await this.ctx.model.User.findByPk(id);
     const user = await this.ctx.model.Userinfo.findOne({ where: { user_name } });
-    console.log(user,'useruseruser');
     if (!user) {
       this.ctx.throw(401, '未查询到该用户或该用户信息已过期');
     }

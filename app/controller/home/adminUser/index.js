@@ -23,6 +23,7 @@ class AdminUserController extends Controller {
       ctx.status = 401;
       ctx.body = { code: 401, message: '登录失败,请确认用户名或密码' };
     }
+    // ctx.body =  await ctx.service.home.adminUser.index.validUser(data.user_name, data.password);
   }
   // 获取所有用户
   async index() {

@@ -14,6 +14,8 @@ module.exports = app => {
     password: STRING(255),
     email: STRING(255),
     phone: STRING(255),
+    last_login_ip:STRING(255),
+    last_login_time:STRING(255),
     created_at: DATE,
     updated_at: DATE,
   });

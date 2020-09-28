@@ -40,6 +40,7 @@ class ServerCount extends Service {
     if (!user) {
       this.ctx.throw(404, 'user not found');
     }
+    console.log(user,'user');
     return user.update(updates);
   }
 
