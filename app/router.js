@@ -30,6 +30,9 @@ module.exports = app => {
   router.post('/analysis/allServer'  , jwt , controller.home.analysis.index.findAllServer);
   router.post('/analysis/allJserr'  , jwt , controller.home.analysis.index.findAllJsErr);
 
+  router.post('/analysis/getAllUserDetail'  , jwt , controller.home.analysis.alluser.findAllUser);
+  router.post('/analysis/getAllFunDetail'  , jwt , controller.home.analysis.allfun.findAllFun);
+
 
   //account
   router.post('/usercenter/adduser'  , jwt , controller.home.userCenter.userManage.index.AddUser);
