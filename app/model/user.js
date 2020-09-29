@@ -17,6 +17,7 @@ module.exports = app => {
     hisuserid:STRING(255),
     created_at: DATE,
     updated_at: DATE,
+    deleted_at:DATE,
   });
 
   User.prototype.associate = function() {

@@ -17,6 +17,7 @@ module.exports = app => {
     machine_id:STRING(255),
     created_at: DATE,
     updated_at: DATE,
+    deleted_at:DATE,
   });
 
   Jserr.prototype.associate = function() {

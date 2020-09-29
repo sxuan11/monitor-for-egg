@@ -33,4 +33,6 @@ module.exports = app => {
 
   //account
   router.post('/usercenter/adduser'  , jwt , controller.home.userCenter.userManage.index.AddUser);
+  router.post('/usercenter/getalluser'  , jwt , controller.home.userCenter.userManage.index.GetAllUser)
+  router.post('/usercenter/deleteuser'  , jwt , controller.home.userCenter.userManage.index.DeleteUser)
 };

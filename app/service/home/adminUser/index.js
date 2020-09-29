@@ -38,12 +38,13 @@ class AdminUserService extends Service {
     if (pwdUser) {
       let result2 = decrypt(pwdUser.password)
       if (result === result2) {
+        const updateUser = await ctx.model.Userinfo.findOne({where: {user_name}})
         let updateInfo = {
-          id:pwdUser.id,
           last_login_ip: this.ctx.request.ip,
-          last_login_time: moment.now().toString()
+          last_login_time: moment().format('YYYY-MM-DD HH:mm:ss')
         }
         pwdUser.update(updateInfo)
+        updateUser.update(updateInfo)
         return true
       } else {
         return false;

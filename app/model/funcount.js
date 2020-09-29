@@ -17,6 +17,7 @@ module.exports = app => {
     is_effect: STRING(255),
     created_at: DATE,
     updated_at: DATE,
+    deleted_at:DATE,
   });
 
   Funcount.prototype.associate = function() {

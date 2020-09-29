@@ -18,6 +18,7 @@ module.exports = app => {
     use_time: STRING(255),
     created_at: DATE,
     updated_at: DATE,
+    deleted_at:DATE,
   });
 
   ServerCount.prototype.associate = function() {

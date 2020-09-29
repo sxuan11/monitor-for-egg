@@ -21,6 +21,7 @@ module.exports = app => {
     create_time: STRING(255),
     last_login_time: STRING(255),
     updated_at: DATE,
+    deleted_at:DATE,
   });
 
   return Userinfo;

@@ -103,6 +103,37 @@ class UserManage extends Service {
 
   }
 
+  async getAllUser({ offset = 0, limit = 10000 }){
+    const { ctx } = this
+    return await ctx.model.Userinfo.findAndCountAll({offset,limit,})
+  }
+
+  async deleteUser(data){
+    console.log(data,'data');
+    const { ctx } = this
+    if(data.user_name === 'sxuan'){
+      return {
+        code:400,
+        message:'马老板你不可以删除我哦'
+      }
+    }
+    const user1 = await ctx.model.Userinfo.findOne({where:{user_name:data.user_name}})
+    const user2 = await ctx.model.AdminUsers.findOne({where:{user_name:data.user_name}})
+    if(user1 && user2){
+      user1.destroy()
+      user2.destroy()
+      return {
+        code:200,
+        message:'删除成功'
+      }
+    }else {
+      return {
+        code:200,
+        message:'什么，删除不到？好像没有这个人'
+      }
+    }
+  }
+
 }
 
 module.exports = UserManage;
