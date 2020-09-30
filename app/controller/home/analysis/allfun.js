@@ -3,9 +3,9 @@
 const Controller = require('egg').Controller;
 
 const createRule = {
-  offset:'string?',
+  offset:'string',
   date: 'string',
-  limit:'string?'
+  limit:'string'
 };
 
 class AnalysisController extends Controller {

@@ -3,10 +3,10 @@
 const Controller = require('egg').Controller;
 const moment = require('moment')
 const createRule = {
-  offset:'string?',
+  offset:'string',
   startDate: 'string',
   endDate:'string?',
-  limit:'string?'
+  limit:'string'
 };
 
 class AnalysisController extends Controller {

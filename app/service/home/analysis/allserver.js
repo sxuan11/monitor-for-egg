@@ -7,7 +7,7 @@ let Op = Sequelize.Op;
 
 class Analysis extends Service {
 
-  async findAllServerByDate({start_date , end_date , offset = 0, limit = 10}) {
+  async findAllServerByDate({start_date , end_date , offset, limit}) {
     // let tomorrow = moment(date).add(1, 'days').format('YYYY-MM-DD');
     let allServer = await this.ctx.model.ServerCount.findAndCountAll({
       where: {created_at: {[Op.gte]: start_date, [Op.lte]: end_date}},

@@ -7,7 +7,7 @@ let Op = Sequelize.Op;
 
 class Analysis extends Service {
 
-  async findAllFunByDate({date, offset = 0, limit = 10}) {
+  async findAllFunByDate({date, offset, limit}) {
     let tomorrow = moment(date).add(1, 'days').format('YYYY-MM-DD');
     let allFun = await this.ctx.model.Funcount.findAndCountAll({
       where: {created_at: {[Op.gte]: date, [Op.lte]: tomorrow}},
