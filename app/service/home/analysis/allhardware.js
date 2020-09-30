@@ -14,6 +14,30 @@ class Analysis extends Service {
       offset,
       limit
     })
+    for (let item of allHardware.rows) {
+      switch (item.hardware) {
+        case 'PRINT':
+          item.hardware = '大打印機'
+          break;
+        case 'READ_CARD':
+          item.hardware = '读卡器'
+          break;
+        case 'HandWrite':
+          item.hardware = '手写板'
+          break;
+        case 'ID_CARD':
+          item.hardware = '刷卡器'
+          break;
+        case 'MS_PRINT':
+          item.hardware = '打印机'
+          break;
+        case 'CAMERA':
+          item.hardware = '摄像头'
+          break;
+        default:
+          break;
+      }
+    }
     return allHardware;
   }
 

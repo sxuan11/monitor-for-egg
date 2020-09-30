@@ -34,6 +34,7 @@ module.exports = app => {
   router.post('/analysis/getAllFunDetail'  , jwt , controller.home.analysis.allfun.findAllFun);
   router.post('/analysis/getAllServerDetail'  , jwt , controller.home.analysis.allserver.findAllServer);
   router.post('/analysis/getAllHardwareDetail'  , jwt , controller.home.analysis.allhardware.findAllHardware);
+  router.post('/analysis/getAllJsErrDetail'  , jwt , controller.home.analysis.alljserr.findAllJsErr);
 
 
   //account
