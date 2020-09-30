@@ -7,10 +7,10 @@ let Op = Sequelize.Op;
 
 class Analysis extends Service {
 
-  async findAllUserByDate({date, offset , limit}) {
-    let tomorrow = moment(date).add(1, 'days').format('YYYY-MM-DD');
+  async findAllUserByDate({start_date , end_date, offset , limit}) {
+    // let tomorrow = moment(date).add(1, 'days').format('YYYY-MM-DD');
     let allUser = await this.ctx.model.User.findAndCountAll({
-      where: {created_at: {[Op.gte]: date, [Op.lte]: tomorrow}},
+      where: {created_at: {[Op.gte]: start_date, [Op.lte]: end_date}},
       offset,
       limit
     })
