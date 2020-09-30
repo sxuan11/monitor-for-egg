@@ -14,7 +14,7 @@ class Analysis extends Service {
       offset,
       limit
     })
-    allServer.count = Math.ceil(allServer.count / limit) * 10
+    allServer.count = allServer.count * 10
     return allServer;
   }
 

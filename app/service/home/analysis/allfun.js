@@ -14,7 +14,7 @@ class Analysis extends Service {
       offset,
       limit
     })
-    allFun.count = Math.ceil(allFun.count / limit) * 10
+    allFun.count = allFun.count* 10
 
     return allFun;
   }

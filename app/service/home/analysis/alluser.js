@@ -14,7 +14,7 @@ class Analysis extends Service {
       offset,
       limit
     })
-    allUser.count = Math.ceil(allUser.count / limit) * 10
+    allUser.count = allUser.count * 10
     for (let item of allUser.rows) {
       switch (item.login_mode) {
         case 'NUM_INPUT_IDCARD':
