@@ -14,7 +14,6 @@ class Analysis extends Service {
       offset,
       limit
     })
-    allFun.count = allFun.count* 10
 
     return allFun;
   }
