@@ -23,7 +23,29 @@ module.exports = {
     port: 3306,
     database: 'shujushouji',
     password: 'Sxuan123@sxuan',
-    timezone: '+08:00' // 保存为本地时区
+    timezone: '+08:00', // 保存为本地时区
+    define: {
+      // 自动写入时间戳 created_at updated_at
+      timestamps: true,
+      // 字段生成软删除时间戳 deleted_at
+      paranoid: true,
+      createdAt: 'created_at',
+      updatedAt: 'updated_at',
+      deletedAt: 'deleted_at',
+      // 所有驼峰命名格式化
+      underscored: true
+    },
+    dialectOptions: {
+      dateStrings: true,
+      typeCast(field, next) {
+        // for reading from database
+        if (field.type === "DATETIME") {
+          return field.string();
+        }
+        return next();
+      }
+    }
+
   },
   alinode : {
     // 从 `Node.js 性能平台` 获取对应的接入参数

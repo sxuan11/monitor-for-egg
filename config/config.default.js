@@ -51,6 +51,16 @@ module.exports = appInfo => {
         deletedAt: 'deleted_at',
         // 所有驼峰命名格式化
         underscored: true
+      },
+      dialectOptions: {
+        dateStrings: true,
+        typeCast(field, next) {
+          // for reading from database
+          if (field.type === "DATETIME") {
+            return field.string();
+          }
+          return next();
+        }
       }
     }
     // onerror: {
