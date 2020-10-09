@@ -29,7 +29,7 @@ class JsErr extends Service {
       machine_id = this.ctx.header.hisuserid
     }
     let newInfo = {
-      machine_id: machine_id || '999',
+      machine_id: machine_id || 'NULL',
       ...info
     }
     return this.ctx.model.JsErrs.create(newInfo);

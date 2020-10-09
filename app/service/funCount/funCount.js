@@ -37,7 +37,7 @@ class FunCount extends Service {
       machine_id = this.ctx.header.hisuserid
     }
     let newInfo = {
-      machine_id:'999',
+      machine_id:machine_id|| 'NULL',
       user_name : ctx.state.user.name,
       ...info
     }
