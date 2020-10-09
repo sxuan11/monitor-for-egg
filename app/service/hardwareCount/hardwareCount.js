@@ -28,25 +28,26 @@ class ServerCount extends Service {
     }else{
       machine_id = this.ctx.header.hisuserid
     }
-    console.log(info,'info');
     const err = ['纸尽','打印机未连接或未上电','打印头打开','切刀未复位','开启摄像头失败，请重试']
-    if(err.includes(info.err_msg)){
-      const res = await this.ctx.curl(`https://oapi.dingtalk.com/robot/send?access_token=88e9f417717e0d18f5dfe479d95a6ee2118d01c17013b4539b7e9f090f77bd48&timestamp=1602225136903&sign=CRDIzGpxk7rAxdyIN6TTi7vL5ACGYe9QgJjJltL5VAY%3D`, {
-        dataType: 'json',
-        method: 'POST',
-        contentType:'json',
-        data: {
-          "msgtype": "text",
-          "text": {
-            "content": `报警${info.err_msg},机器号为${machine_id}`
-          },
-          "at":{"atMobiles":["+86-18278818963"],
-          "isAtAll":false
-          }},
-        timeout:10000,
+    for(let item of err){
+      if(info.err_msg.includes(item)){
+        const res = await this.ctx.curl(`https://oapi.dingtalk.com/robot/send?access_token=88e9f417717e0d18f5dfe479d95a6ee2118d01c17013b4539b7e9f090f77bd48&timestamp=1602225136903&sign=CRDIzGpxk7rAxdyIN6TTi7vL5ACGYe9QgJjJltL5VAY%3D`, {
+          dataType: 'json',
+          method: 'POST',
+          contentType:'json',
+          data: {
+            "msgtype": "text",
+            "text": {
+              "content": `报警${info.err_msg},机器号为${machine_id}`
+            },
+            "at":{"atMobiles":["+86-18278818963"],
+              "isAtAll":false
+            }},
+          timeout:10000,
 
-      });
-      console.log(res,'resresres')
+        });
+        console.log(res,'resresres')
+      }
     }
     let newInfo = {
       machine_id: machine_id || 'NULL',
