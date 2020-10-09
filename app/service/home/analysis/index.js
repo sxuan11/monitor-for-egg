@@ -156,12 +156,33 @@ class Analysis extends Service {
       counts: 0,
       is_effect: '完成使用'
     }
+    let jiandang0 = {
+      fun_name: '建档',
+      counts: 0,
+      is_effect: '总次数'
+    }
+    let jiandang1 = {
+      fun_name: '建档',
+      counts: 0,
+      is_effect: '完成使用'
+    }
+    let guahao_recored0 = {
+      fun_name: '挂号记录',
+      counts: 0,
+      is_effect: '总次数'
+    }
+    let guahao_recored1 = {
+      fun_name: '挂号记录',
+      counts: 0,
+      is_effect: '完成使用'
+    }
     for (let item of allFun.rows) {
       switch (item.fun_name) {
         case "QR_signup":
           if (item.is_effect === '0') {
             QR_signup0.counts++
           } else {
+            QR_signup0.counts++
             QR_signup1.counts++
           }
           break;
@@ -169,6 +190,7 @@ class Analysis extends Service {
           if (item.is_effect === '0') {
             face_edit0.counts++
           } else {
+            face_edit0.counts++
             face_edit1.counts++
           }
           break;
@@ -176,6 +198,7 @@ class Analysis extends Service {
           if (item.is_effect === '0') {
             guahao0.counts++
           } else {
+            guahao0.counts++
             guahao1.counts++
           }
           break;
@@ -183,6 +206,7 @@ class Analysis extends Service {
           if (item.is_effect === '0') {
             menzhen_pay0.counts++
           } else {
+            menzhen_pay0.counts++
             menzhen_pay1.counts++
           }
           break;
@@ -190,6 +214,7 @@ class Analysis extends Service {
           if (item.is_effect === '0') {
             soc_pay0.counts++
           } else {
+            soc_pay0.counts++
             soc_pay1.counts++
           }
           break;
@@ -197,6 +222,7 @@ class Analysis extends Service {
           if (item.is_effect === '0') {
             print0.counts++
           } else {
+            print0.counts++
             print1.counts++
           }
           break;
@@ -204,6 +230,7 @@ class Analysis extends Service {
           if (item.is_effect === '0') {
             zhuyuan_pay0.counts++
           } else {
+            zhuyuan_pay0.counts++
             zhuyuan_pay1.counts++
           }
           break;
@@ -211,15 +238,32 @@ class Analysis extends Service {
           if (item.is_effect === '0') {
             daily_list0.counts++
           } else {
+            daily_list0.counts++
             daily_list1.counts++
+          }
+          break;
+        case "jiandang":
+          if (item.is_effect === '0') {
+            jiandang0.counts++
+          } else {
+            jiandang0.counts++
+            jiandang1.counts++
+          }
+          break;
+        case "guahao_recored":
+          if (item.is_effect === '0') {
+            guahao_recored0.counts++
+          } else {
+            guahao_recored0.counts++
+            guahao_recored1.counts++
           }
           break;
         default:
           break;
       }
     }
-    column.push(guahao0, guahao1, menzhen_pay0, menzhen_pay1, soc_pay0, soc_pay1, print0, print1, QR_signup0, QR_signup1, face_edit0, face_edit1
-      , daily_list0, daily_list1, zhuyuan_pay0, zhuyuan_pay1)
+    column.push(jiandang0,jiandang1,guahao0, guahao1, menzhen_pay0, menzhen_pay1, soc_pay0, soc_pay1, print0, print1, QR_signup0, QR_signup1, face_edit0, face_edit1
+      ,guahao_recored0,guahao_recored1, daily_list0, daily_list1, zhuyuan_pay0, zhuyuan_pay1)
     allFun.column = column
     delete (allFun["rows"]);
     return allFun
