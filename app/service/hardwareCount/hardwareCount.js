@@ -28,7 +28,7 @@ class ServerCount extends Service {
     }else{
       machine_id = this.ctx.header.hisuserid
     }
-    const err = ['纸尽','打印机未连接或未上电','打印头打开','切刀未复位','开启摄像头失败，请重试']
+    const err = ['纸尽','打印机未连接或未上电','打印头打开','切刀未复位','开启摄像头失败，请重试','密码键盘激活失败']
     for(let item of err){
       if(info.err_msg.includes(item)){
         const res = await this.ctx.curl(`https://oapi.dingtalk.com/robot/send?access_token=88e9f417717e0d18f5dfe479d95a6ee2118d01c17013b4539b7e9f090f77bd48&timestamp=1602225136903&sign=CRDIzGpxk7rAxdyIN6TTi7vL5ACGYe9QgJjJltL5VAY%3D`, {
@@ -38,7 +38,7 @@ class ServerCount extends Service {
           data: {
             "msgtype": "text",
             "text": {
-              "content": `报警${info.err_msg},机器号为${machine_id}`
+              "content": `硬件异常${info.err_msg},机器号为${machine_id}`
             },
             "at":{"atMobiles":["+86-18278818963"],
               "isAtAll":false
@@ -62,6 +62,7 @@ class ServerCount extends Service {
       this.ctx.throw(404, 'user not found');
     }
     console.log(user,'user');
+
     return user.update(updates);
   }
 

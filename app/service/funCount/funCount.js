@@ -29,7 +29,6 @@ class FunCount extends Service {
     // if (findUser) {
     //   return findUser.update(newUser);
     // }
-    console.log(ctx.state.user,' ctx.state.user');
     let machine_id
     if(this.ctx.header.terminalid){
       machine_id = this.ctx.header.terminalid

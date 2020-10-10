@@ -79,7 +79,7 @@ class Analysis extends Service {
     let QR_signup0 = {
       fun_name: '注册健康码',
       counts: 0,
-      is_effect: '总次数'
+      is_effect: '未完成使用'
     }
     let QR_signup1 = {
       fun_name: '注册健康码',
@@ -89,7 +89,7 @@ class Analysis extends Service {
     let face_edit0 = {
       fun_name: '人脸信息',
       counts: 0,
-      is_effect: '总次数'
+      is_effect: '未完成使用'
     }
     let face_edit1 = {
       fun_name: '人脸信息',
@@ -99,7 +99,7 @@ class Analysis extends Service {
     let guahao0 = {
       fun_name: '挂号',
       counts: 0,
-      is_effect: '总次数'
+      is_effect: '未完成使用'
     }
     let guahao1 = {
       fun_name: '挂号',
@@ -109,7 +109,7 @@ class Analysis extends Service {
     let menzhen_pay0 = {
       fun_name: '门诊支付',
       counts: 0,
-      is_effect: '总次数'
+      is_effect: '未完成使用'
     }
     let menzhen_pay1 = {
       fun_name: '门诊支付',
@@ -119,7 +119,7 @@ class Analysis extends Service {
     let soc_pay0 = {
       fun_name: '社保支付',
       counts: 0,
-      is_effect: '总次数'
+      is_effect: '未完成使用'
     }
     let soc_pay1 = {
       fun_name: '社保支付',
@@ -129,7 +129,7 @@ class Analysis extends Service {
     let print0 = {
       fun_name: '自助打印',
       counts: 0,
-      is_effect: '总次数'
+      is_effect: '未完成使用'
     }
     let print1 = {
       fun_name: '自助打印',
@@ -139,7 +139,7 @@ class Analysis extends Service {
     let daily_list0 = {
       fun_name: '住院清单',
       counts: 0,
-      is_effect: '总次数'
+      is_effect: '未完成使用'
     }
     let daily_list1 = {
       fun_name: '住院清单',
@@ -149,7 +149,7 @@ class Analysis extends Service {
     let zhuyuan_pay0 = {
       fun_name: '住院缴费',
       counts: 0,
-      is_effect: '总次数'
+      is_effect: '未完成使用'
     }
     let zhuyuan_pay1 = {
       fun_name: '住院缴费',
@@ -159,7 +159,7 @@ class Analysis extends Service {
     let jiandang0 = {
       fun_name: '建档',
       counts: 0,
-      is_effect: '总次数'
+      is_effect: '未完成使用'
     }
     let jiandang1 = {
       fun_name: '建档',
@@ -169,7 +169,7 @@ class Analysis extends Service {
     let guahao_recored0 = {
       fun_name: '挂号记录',
       counts: 0,
-      is_effect: '总次数'
+      is_effect: '未完成使用'
     }
     let guahao_recored1 = {
       fun_name: '挂号记录',
@@ -182,7 +182,6 @@ class Analysis extends Service {
           if (item.is_effect === '0') {
             QR_signup0.counts++
           } else {
-            QR_signup0.counts++
             QR_signup1.counts++
           }
           break;
@@ -190,7 +189,6 @@ class Analysis extends Service {
           if (item.is_effect === '0') {
             face_edit0.counts++
           } else {
-            face_edit0.counts++
             face_edit1.counts++
           }
           break;
@@ -198,7 +196,6 @@ class Analysis extends Service {
           if (item.is_effect === '0') {
             guahao0.counts++
           } else {
-            guahao0.counts++
             guahao1.counts++
           }
           break;
@@ -206,7 +203,6 @@ class Analysis extends Service {
           if (item.is_effect === '0') {
             menzhen_pay0.counts++
           } else {
-            menzhen_pay0.counts++
             menzhen_pay1.counts++
           }
           break;
@@ -214,7 +210,6 @@ class Analysis extends Service {
           if (item.is_effect === '0') {
             soc_pay0.counts++
           } else {
-            soc_pay0.counts++
             soc_pay1.counts++
           }
           break;
@@ -222,7 +217,6 @@ class Analysis extends Service {
           if (item.is_effect === '0') {
             print0.counts++
           } else {
-            print0.counts++
             print1.counts++
           }
           break;
@@ -230,7 +224,6 @@ class Analysis extends Service {
           if (item.is_effect === '0') {
             zhuyuan_pay0.counts++
           } else {
-            zhuyuan_pay0.counts++
             zhuyuan_pay1.counts++
           }
           break;
@@ -238,7 +231,6 @@ class Analysis extends Service {
           if (item.is_effect === '0') {
             daily_list0.counts++
           } else {
-            daily_list0.counts++
             daily_list1.counts++
           }
           break;
@@ -246,7 +238,6 @@ class Analysis extends Service {
           if (item.is_effect === '0') {
             jiandang0.counts++
           } else {
-            jiandang0.counts++
             jiandang1.counts++
           }
           break;
@@ -254,7 +245,6 @@ class Analysis extends Service {
           if (item.is_effect === '0') {
             guahao_recored0.counts++
           } else {
-            guahao_recored0.counts++
             guahao_recored1.counts++
           }
           break;

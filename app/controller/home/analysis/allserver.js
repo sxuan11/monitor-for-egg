@@ -6,7 +6,8 @@ const createRule = {
   offset:'string',
   startDate: 'string',
   endDate:'string?',
-  limit:'string'
+  limit:'string',
+  filters:'object?'
 };
 
 class AnalysisController extends Controller {
@@ -26,7 +27,8 @@ class AnalysisController extends Controller {
       limit: ctx.helper.parseInt(ctx.request.body.limit),
       offset: ctx.helper.parseInt(ctx.request.body.offset),
       start_date:ctx.request.body.startDate,
-      end_date:end_date
+      end_date:end_date,
+      filters:ctx.request.body.filters
     };
     ctx.body = await ctx.service.home.analysis.allserver.findAllServerByDate(body);
   }

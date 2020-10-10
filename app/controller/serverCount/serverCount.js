@@ -7,7 +7,11 @@ const createRule = {
   res_message: 'string?', // 响应消息
   res_data: 'object?', // 响应数据
   res:'object?',
-  req : 'object', //请求数据
+  req : 'object?', //请求数据
+  request_method:"string?",
+  request_data:'object?',
+  request_params:'object?',
+  request_url:"string?",
   use_time: 'string?', // 花费请求的时间
 };
 

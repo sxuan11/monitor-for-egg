@@ -12,6 +12,9 @@ class Analysis extends Service {
     let allUser = await this.ctx.model.User.findAndCountAll({
       where: {created_at: {[Op.gte]: start_date, [Op.lte]: end_date}},
       offset,
+      order: [
+        ['created_at', 'DESC']
+      ],
       limit
     })
     for (let item of allUser.rows) {

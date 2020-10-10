@@ -11,6 +11,9 @@ class Analysis extends Service {
     // let tomorrow = moment(date).add(1, 'days').format('YYYY-MM-DD');
     let allFun = await this.ctx.model.Funcount.findAndCountAll({
       where: {created_at: {[Op.gte]: start_date, [Op.lte]: end_date}},
+      order: [
+        ['created_at', 'DESC']
+      ],
       offset,
       limit
     })

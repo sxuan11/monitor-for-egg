@@ -22,18 +22,18 @@ class ServerCount extends Service {
 
   async create(info) {
     const { app , ctx  } = this;
+    console.log(info,'info');
     let machine_id
-    if(this.ctx.header.terminalid){
-      machine_id = this.ctx.header.terminalid
+    if(ctx.header.terminalid){
+      machine_id = ctx.header.terminalid
     }else{
-      machine_id = this.ctx.header.hisuserid
+      machine_id = ctx.header.hisuserid
     }
     let newInfo = {
       machine_id: machine_id || 'NULL',
       ...info
     }
-    console.log(newInfo,'newInfo');
-    return this.ctx.model.ServerCount.create(newInfo);
+    return ctx.model.ServerCount.create(newInfo);
   }
 
   async update({ id, updates }) {
