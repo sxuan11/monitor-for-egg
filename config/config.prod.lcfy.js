@@ -10,18 +10,18 @@ module.exports = {
       // 端口号
       port: '3306',
       // 用户名
-      user: 'sdmxb_monitor',
+      user: 'lcfy_monitor',
       // 密码
       password: 'root',
       // 数据库名
-      database: 'sdmxb_monitor',
+      database: 'lcfy_monitor',
     },
   },
   sequelize : {
     dialect: 'mysql',
     host: 'localhost',
     port: 3306,
-    database: 'sdmxb_monitor',
+    database: 'lcfy_monitor',
     password: 'root',
     timezone: '+08:00' ,// 保存为本地时区
     define: {
