@@ -6,7 +6,7 @@ module.exports = {
   mysql: {
     client: {
       // host
-      host: '127.0.0.1',
+      host: 'localhost',
       // 端口号
       port: '3306',
       // 用户名
@@ -19,7 +19,7 @@ module.exports = {
   },
   sequelize : {
     dialect: 'mysql',
-    host: '127.0.0.1',
+    host: 'localhost',
     port: 3306,
     database: 'lcfy_monitor',
     password: 'root',

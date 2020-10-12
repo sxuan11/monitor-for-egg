@@ -37,7 +37,7 @@
     "node": ">=10.0.0"
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --env=prod --title=egg-server-shuju",
+    "start": "egg-scripts start --daemon --port=7070 --env=prod --title=egg-server-shuju",
     "start_linux": "egg-scripts start --env=linux --daemon --title=egg-server-shuju",
     "start_dev": "egg-scripts start --env=dev --daemon --title=egg-server-shuju",
     "stop": "egg-scripts stop --title=egg-server-shuju",
