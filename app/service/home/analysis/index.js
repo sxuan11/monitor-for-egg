@@ -329,7 +329,7 @@ class Analysis extends Service {
     let tempArr = []
     //获取数组
     for (let item of allServer.rows) {
-      tempArr.push(item.req.request_url)
+      tempArr.push(item.request_url)
     }
     //去重
     let apiArr = Array.from(new Set(tempArr));
@@ -363,7 +363,7 @@ class Analysis extends Service {
     //添加计算
     ghlArr.map((value, index) => {
       for (let item of allServer.rows) {
-        if (item.req.request_url === value.type) {
+        if (item.request_url === value.type) {
           if (item.res_code == 200) {
             if (value.success === '成功') {
               value.counts++
