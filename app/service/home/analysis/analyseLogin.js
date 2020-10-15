@@ -12,13 +12,27 @@ class Analysis extends Service {
     let allLogin = await this.ctx.model.AnalyseLogins.findAndCountAll({
       where: {date: {[Op.gte]: start_date, [Op.lte]: end_date}},
     })
-    let coulm = []
+    let column = []
+    let tableInfo = {}
+    tableInfo.count = []
+    let data = {
+
+    }
     for(let item of allLogin.rows){
+      let date = item.date
+      let count = item.counts
+      let obj = {
+        date,count
+      }
+      tableInfo.count.push(obj)
       for(let item2 of item.login_data.column){
-        coulm.push(item2)
+        column.push(item2)
       }
     }
-    return coulm;
+    data.column = column
+    data.count = allLogin.count
+    data.tableInfo = tableInfo
+    return data;
   }
 
 }
