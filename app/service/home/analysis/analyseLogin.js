@@ -10,7 +10,7 @@ class Analysis extends Service {
   async findAnalyseLogin({start_date, end_date}) {
 
     let allLogin = await this.ctx.model.AnalyseLogins.findAndCountAll({
-      where: {created_at: {[Op.gte]: start_date, [Op.lte]: end_date}},
+      where: {date: {[Op.gte]: start_date, [Op.lte]: end_date}},
     })
     let coulm = []
     for(let item of allLogin.rows){
