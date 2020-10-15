@@ -36,6 +36,7 @@ module.exports = app => {
   router.post('/analysis/getAllHardwareDetail'  , jwt , controller.home.analysis.allhardware.findAllHardware);
   router.post('/analysis/getAllJsErrDetail'  , jwt , controller.home.analysis.alljserr.findAllJsErr);
 
+  router.post('/analysis/getAnalyseLogin'  , jwt , controller.home.analysis.analyseLogin.findAllLogin);
 
   //account
   router.post('/usercenter/adduser'  , jwt , controller.home.userCenter.userManage.index.AddUser);

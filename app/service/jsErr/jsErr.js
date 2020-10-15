@@ -1,6 +1,9 @@
 'use strict';
 
+const Sequelize = require("sequelize");
 const Service = require('egg').Service;
+const moment = require('moment')
+let Op = Sequelize.Op;
 
 class JsErr extends Service {
   async list({ offset = 0, limit = 10 }) {
