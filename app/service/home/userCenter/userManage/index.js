@@ -50,32 +50,10 @@ class UserManage extends Service {
     for(let item of roleInfo){
       let obj = {
           "roleId":data.role_id,
-          "actions":"[{'action':'add','defaultCheck':false,'describe':'新增'},{'action':'query','defaultCheck':false,'describe':'查询'},{'action':'get','defaultCheck':false,'describe':'详情'},{'action':'update','defaultCheck':false,'describe':'修改'},{'action':'delete','defaultCheck':false,'describe':'删除'}]",
           "actionList":null,
           "dataAccess":null,
           "permissionId":item,
           "permissionName":item,
-          "actionEntitySet":[{
-            "action": "add",
-            "describe": "新增",
-            "defaultCheck": false
-          }, {
-            "action": "query",
-            "describe": "查询",
-            "defaultCheck": false
-          }, {
-            "action": "get",
-            "describe": "详情",
-            "defaultCheck": false
-          }, {
-            "action": "update",
-            "describe": "修改",
-            "defaultCheck": false
-          }, {
-            "action": "delete",
-            "describe": "删除",
-            "defaultCheck": false
-          }]
         }
         permissions.push(obj)
     }
@@ -134,6 +112,34 @@ class UserManage extends Service {
     }
   }
 
+  async updateUser({id,role}){
+    const { ctx } = this
+    const user = await this.ctx.model.Userinfo.findByPk(id);
+    if (!user) {
+      this.ctx.throw(400, '未查询记录');
+    }
+    let deep = JSON.parse(JSON.stringify(user))
+    let permissions = []
+    for(let item of role){
+      let obj = {
+        "roleId":deep.role_id,
+        "actionList":null,
+        "dataAccess":null,
+        "permissionId":item,
+        "permissionName":item,
+      }
+      permissions.push(obj)
+    }
+    let data = deep.role
+    delete data.permissions
+    data.permissions = permissions
+    let updates = {
+      role:data
+    }
+    return user.update(updates);
+
+    // return deep
+  }
 }
 
 module.exports = UserManage;

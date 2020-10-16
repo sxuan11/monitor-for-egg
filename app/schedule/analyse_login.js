@@ -19,8 +19,8 @@ class Analyse_login extends Subscription {
   // subscribe 是真正定时任务执行时被运行的函数
   async subscribe() {
     let { ctx , model} = this
-    let yesterday = moment().subtract(21, 'days').format('YYYY-MM-DD');
-    let today = moment().subtract(20, 'days').format('YYYY-MM-DD');
+    let yesterday = moment().subtract(1, 'days').format('YYYY-MM-DD');
+    let today = moment().format('YYYY-MM-DD');
     let allUser = await this.ctx.model.User.findAndCountAll({
       where: {created_at: {[Op.gte]: yesterday, [Op.lte]: today}},
     })

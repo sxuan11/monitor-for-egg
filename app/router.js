@@ -37,9 +37,11 @@ module.exports = app => {
   router.post('/analysis/getAllJsErrDetail'  , jwt , controller.home.analysis.alljserr.findAllJsErr);
 
   router.post('/analysis/getAnalyseLogin'  , jwt , controller.home.analysis.analyseLogin.findAllLogin);
+  router.post('/analysis/getAnalyseFunuse'  , jwt , controller.home.analysis.analyseFunuse.findAllFunuse);
 
   //account
   router.post('/usercenter/adduser'  , jwt , controller.home.userCenter.userManage.index.AddUser);
   router.post('/usercenter/getalluser'  , jwt , controller.home.userCenter.userManage.index.GetAllUser)
   router.post('/usercenter/deleteuser'  , jwt , controller.home.userCenter.userManage.index.DeleteUser)
+  router.post('/usercenter/updateuser'  , jwt , controller.home.userCenter.userManage.index.UpdateUser)
 };

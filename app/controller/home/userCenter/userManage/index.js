@@ -16,6 +16,11 @@ const Rule2 = {
   user_name:'string'
 }
 
+const newRule = {
+  id:'string',
+  role: 'array',
+}
+
 class UserManageController extends Controller {
 
   async AddUser() {
@@ -48,6 +53,13 @@ class UserManageController extends Controller {
     const data = ctx.request.body
     ctx.validate(Rule2, data);
     ctx.body =  await ctx.service.home.userCenter.userManage.index.deleteUser(data);
+  }
+
+  async UpdateUser(){
+    const ctx = this.ctx;
+    const data = ctx.request.body
+    ctx.validate(newRule, data);
+    ctx.body =  await ctx.service.home.userCenter.userManage.index.updateUser(data);
   }
 
 }

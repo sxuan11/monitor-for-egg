@@ -3,7 +3,7 @@
 module.exports = app => {
   const { STRING, INTEGER, DATE ,JSON} = app.Sequelize;
 
-  const Analyse_funuses = app.model.define('analyse_logins', {
+  const Analyse_funuses = app.model.define('analyse_funuses', {
     id: {
       type: INTEGER,
       primaryKey: true,
@@ -11,6 +11,7 @@ module.exports = app => {
     },
     funuse_data:JSON,
     fun_average_time:JSON,
+    finish_rate:JSON,
     date:DATE,
     counts:STRING(255),
     unuse_times:STRING(255),
