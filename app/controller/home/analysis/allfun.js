@@ -9,8 +9,22 @@ const createRule = {
   limit:'string'
 };
 
+/**
+ * @Controller Analysis
+
+ */
+
 class AnalysisController extends Controller {
 
+  /**
+   * @Summary 根据日期查询
+   * @Description 根据日期查询。
+   * @Router post /analysis/getAllFunDetail
+   * @Request body createResource *body resourceInfo
+   * @Request header string Authorization
+   * @Response 200 baseResponse
+   * @returns {Promise<void>}
+   */
   async findAllFun() {
     const ctx = this.ctx;
     const data = ctx.request.body
@@ -28,7 +42,8 @@ class AnalysisController extends Controller {
       start_date:ctx.request.body.startDate,
       end_date:end_date
     };
-    ctx.body = await ctx.service.home.analysis.allfun.findAllFunByDate(body);
+    let result = await ctx.service.home.analysis.allfun.findAllFunByDate(body);
+    ctx.body = result
   }
 
 }

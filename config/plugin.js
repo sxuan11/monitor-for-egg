@@ -26,6 +26,14 @@ module.exports = {
     enable: true,
     package: 'egg-sequelize',
   },
+  io : {
+    enable: false,
+    package: 'egg-socket.io',
+  },
+  swaggerdoc : {
+    enable: true,
+    package: 'egg-swagger-doc',
+  }
   // alinode : {
   //   enable: true,
   //   package: 'egg-alinode',

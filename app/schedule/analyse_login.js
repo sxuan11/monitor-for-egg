@@ -19,14 +19,15 @@ class Analyse_login extends Subscription {
   // subscribe 是真正定时任务执行时被运行的函数
   async subscribe() {
     let { ctx , model} = this
-    let yesterday = moment().subtract(1, 'days').format('YYYY-MM-DD');
-    let today = moment().format('YYYY-MM-DD');
+    let yesterday = moment().subtract(5, 'days').format('YYYY-MM-DD');
+    let today = moment().subtract(4, 'days').format('YYYY-MM-DD');
     let allUser = await this.ctx.model.User.findAndCountAll({
       where: {created_at: {[Op.gte]: yesterday, [Op.lte]: today}},
     })
     let allCount = {}
     // allCount.count = allUser.count
     allCount.column = []
+    let countID_CARD = []
     let all_time = {
       date:yesterday,
       type: '总人次',
@@ -85,8 +86,15 @@ class Analyse_login extends Subscription {
         default:
           break;
       }
+      countID_CARD.push(item.idcard)
     }
-    allCount.column.push(all_time,ID_CARD, SOC_CARD, FACE, NUM_INPUT_IDCARD, NUM_INPUT_NUM, QR_CODE)
+    countID_CARD = Array.from(new Set(countID_CARD))
+    let all_person = {
+      date:yesterday,
+      type: '总人数',
+      counts: countID_CARD.length
+    }
+    allCount.column.push(all_time,all_person,ID_CARD, SOC_CARD, FACE, NUM_INPUT_IDCARD, NUM_INPUT_NUM, QR_CODE)
     let data = {
       date:yesterday,
       login_data:allCount,

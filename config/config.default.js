@@ -16,6 +16,54 @@ module.exports = appInfo => {
     // gzip: {
     //   threshold: 1024, // 小于 1k 的响应体不压缩
     // },
+    proxy : true,
+    // maxIpsCount:1,
+    ipHeaders : 'X-Real-Ip, X-Forwarded-For',
+    swaggerdoc : {
+      dirScanner: './app/controller',
+      apiInfo: {
+        title: 'egg-swagger',
+        description: 'swagger-ui for egg',
+        version: '1.0.0',
+      },
+      basePath: '/',
+      schemes: ['http', 'https'],
+      consumes: ['application/json'],
+      produces: ['application/json'],
+      securityDefinitions: {
+        // apikey: {
+        //   type: 'apiKey',
+        //   name: 'clientkey',
+        //   in: 'header',
+        // },
+        // oauth2: {
+        //   type: 'oauth2',
+        //   tokenUrl: 'http://petstore.swagger.io/oauth/dialog',
+        //   flow: 'password',
+        //   scopes: {
+        //     'write:access_token': 'write access_token',
+        //     'read:access_token': 'read access_token',
+        //   },
+        // },
+      },
+      enableSecurity: false,
+      // enableValidate: true,
+      routerMap: true,
+      enable: true,
+    },
+    // io : {
+    //   init: { }, // passed to engine.io
+    //   namespace: {
+    //     '/': {
+    //       connectionMiddleware: [],
+    //       packetMiddleware: [],
+    //     },
+    //     '/example': {
+    //       connectionMiddleware: [],
+    //       packetMiddleware: [],
+    //     },
+    //   },
+    // },
     bodyParser: {
       jsonLimit: '1mb',
       formLimit: '1mb',
