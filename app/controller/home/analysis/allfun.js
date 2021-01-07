@@ -11,7 +11,6 @@ const createRule = {
 
 /**
  * @Controller Analysis
-
  */
 
 class AnalysisController extends Controller {

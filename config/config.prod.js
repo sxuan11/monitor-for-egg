@@ -10,19 +10,20 @@ module.exports = {
       // 端口号
       port: '3306',
       // 用户名
-      user: 'sdmxb_monitor',
+      user: 'monitor',
       // 密码
-      password: 'root',
+      password: 'sxuan',
       // 数据库名
-      database: 'sdmxb_monitor',
+      database: 'monitor',
     },
   },
   sequelize : {
     dialect: 'mysql',
     host: 'localhost',
     port: 3306,
-    database: 'sdmxb_monitor',
-    password: 'root',
+    database: 'monitor',
+    username: 'monitor',
+    password: 'sxuan',
     timezone: '+08:00' ,// 保存为本地时区
     define: {
       // 自动写入时间戳 created_at updated_at

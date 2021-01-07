@@ -44,4 +44,7 @@ module.exports = app => {
   router.post('/usercenter/getalluser'  , jwt , controller.home.userCenter.userManage.index.GetAllUser)
   router.post('/usercenter/deleteuser'  , jwt , controller.home.userCenter.userManage.index.DeleteUser)
   router.post('/usercenter/updateuser'  , jwt , controller.home.userCenter.userManage.index.UpdateUser)
+
+  //ProjectManager
+  app.resources('projectManager', '/projectManager/',jwt, controller.home.projectManager.index);
 };
