@@ -22,6 +22,7 @@ module.exports = {
     host: '127.0.0.1',
     port: 3306,
     database: 'shujushouji',
+    username: 'root',
     password: 'Sxuan123@sxuan',
     timezone: '+08:00', // 保存为本地时区
     define: {

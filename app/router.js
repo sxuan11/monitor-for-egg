@@ -47,4 +47,6 @@ module.exports = app => {
 
   //ProjectManager
   app.resources('projectManager', '/projectManager/',jwt, controller.home.projectManager.index);
+  router.post('/deployserver/firstDeploy'  , jwt , controller.home.projectManager.deployServer.firstDeploy)
+  router.get('/deployserver/envCheck'  , jwt , controller.home.projectManager.deployServer.envCheck)
 };

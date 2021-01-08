@@ -15,4 +15,8 @@ module.exports = {
     hos_name: { type: 'string', required: true, example: '新丰卫生院' }, // 医院名称
     hos_url: { type: 'string', required: true, example: 'http://127.0.0.1:3030/projectManager' }, // 医院服务url
   },
+  createDeploy: {
+    hos_name: { type: 'string', required: true, example: '新丰卫生院' }, // 医院名称
+    hos_url: { type: 'string', required: true, example: 'http://127.0.0.1:3030/projectManager' }, // 医院服务url
+  },
 };
