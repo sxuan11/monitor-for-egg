@@ -31,6 +31,7 @@ class DeployServerController extends Controller {
    * @Summary 第一次部署
    * @Description 第一次部署。
    * @Router post /deployserver/firstDeploy
+   * @Request body createDeploy *body resourceInfo
    * @Request header string Authorization
    * @Response 200 baseResponse
    * @returns {Promise<void>}
