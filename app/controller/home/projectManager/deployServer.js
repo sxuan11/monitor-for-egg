@@ -9,6 +9,11 @@ const firstDeploy = {
   git_name: 'string', // git仓库名称
 };
 
+const updateproject = {
+  id:'string',
+  to_hash:'string'//更新的目标hash值
+}
+
 /**
  * @Controller DeployServer 卫生院部署
  */
@@ -41,6 +46,35 @@ class DeployServerController extends Controller {
     const data = ctx.request.body
     ctx.validate(firstDeploy, data);
     ctx.body = await ctx.service.home.projectManager.deployServer.firstDeploy(ctx.request.body);
+  }
+
+  /**
+   * @Summary 检查该项目当前的提交情况
+   * @Description 检查该项目当前的提交情况。
+   * @Router get /deployserver/checkGitLog
+   * @Request header string Authorization
+   * @Response 200 baseResponse
+   * @returns {Promise<void>}
+   */
+  async checkGitLog() {
+    const ctx = this.ctx;
+    ctx.body = await ctx.service.home.projectManager.deployServer.checkGitLog();
+  }
+
+  /**
+   * @Summary 更新到指定版本
+   * @Description 更新到指定版本。
+   * @Router post /deployserver/updateproject
+   * @Request body updateProject *body resourceInfo
+   * @Request header string Authorization
+   * @Response 200 baseResponse
+   * @returns {Promise<void>}
+   */
+  async updateproject() {
+    const ctx = this.ctx;
+    const data = ctx.request.body
+    ctx.validate(updateproject, data);
+    ctx.body = await ctx.service.home.projectManager.deployServer.updateproject(ctx.request.body);
   }
 }
 

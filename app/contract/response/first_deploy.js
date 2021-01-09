@@ -1,11 +1,7 @@
 'use strict';
 
 module.exports = {
-  baseResponse: {
-    result: { type: 'boolean', required: true },
-    message: { type: 'string' },
-  },
-  // firstDeployServerResponse:{
+  // firstDeployResponse:{
   //   result:{
   //     "id": 2,
   //     "folder_info": {
