@@ -12,7 +12,7 @@ module.exports = {
       // 用户名
       user: 'monitor',
       // 密码
-      password: 'sxuan',
+      password: 'monitor',
       // 数据库名
       database: 'monitor',
     },
@@ -23,7 +23,7 @@ module.exports = {
     port: 3306,
     database: 'monitor',
     username: 'monitor',
-    password: 'sxuan',
+    password: 'monitor',
     timezone: '+08:00' ,// 保存为本地时区
     define: {
       // 自动写入时间戳 created_at updated_at

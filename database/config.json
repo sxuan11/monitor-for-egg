@@ -15,8 +15,8 @@
   },
   "production": {
     "username": "monitor",
-    "password": "sxuan",
-    "database": "shujushouji",
+    "password": "monitor",
+    "database": "monitor",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }

@@ -42,7 +42,19 @@ class DeployServer extends Service {
   async envCheck() {
     let info = await this.ctx.model.DeployServers.findAndCountAll();
     if(info.rows.length !== 0){
-      return info.rows[0]
+      let retinfo = JSON.parse(JSON.stringify(info.rows[0]))
+      let dataIndex = []
+      for await (let item of retinfo.folder_info.gitLog){
+        let info2 = item.split(' ')
+        info2.splice(0,1)
+        let obj = {
+          git_message:info2.join(' '),
+          git_hash:item.split(' ')[0],
+        }
+        dataIndex.push(obj);
+      }
+      retinfo.dataIndex = dataIndex
+      return retinfo
     }else{
       return false
     }
@@ -90,8 +102,18 @@ class DeployServer extends Service {
       await execSync(`git clone -b ${newInfo.git_branch} ${newInfo.git_url}`,{cwd:newInfo.folder_path})
       await fs.renameSync(`${newInfo.folder_path}\\${newInfo.git_name}`,`${newInfo.folder_path}\\use_check_dont_delete`)
     }
-    let log = await execSync('git log --oneline',{cwd:newInfo.folder_path+'\\'+'use_check_dont_delete'}).toString()
-    return log
+    let log = await execSync('git log --oneline',{cwd:newInfo.folder_path+'\\'+'use_check_dont_delete'}).toString().split('\n')
+    let dataIndex = []
+    for await (let item of log){
+      let info2 = item.split(' ')
+      info2.splice(0,1)
+      let obj = {
+        git_message:info2.join(' '),
+        git_hash:item.split(' ')[0],
+      }
+      dataIndex.push(obj);
+    }
+    return dataIndex
   }
 
   async updateproject({to_hash,id}){
@@ -126,7 +148,20 @@ class DeployServer extends Service {
         folder_info,
         other_info,
       }
-      return await info.update(uptateInfo);
+      let nowupdate = await info.update(uptateInfo);
+      let retinfo = JSON.parse(JSON.stringify(nowupdate))
+      let dataIndex = []
+      for await (let item of retinfo.folder_info.gitLog){
+        let info2 = item.split(' ')
+        info2.splice(0,1)
+        let obj = {
+          git_message:info2.join(' '),
+          git_hash:item.split(' ')[0],
+        }
+        dataIndex.push(obj);
+      }
+      retinfo.dataIndex = dataIndex
+      return retinfo
     }
     else{
       let clone = await execSync(`git clone -b ${info.git_branch} ${info.git_url}`,{cwd:info.folder_path})
@@ -148,7 +183,20 @@ class DeployServer extends Service {
         folder_info,
         other_info,
       }
-      return await info.update(uptateInfo);
+      let nowupdate = await info.update(uptateInfo);
+      let retinfo = JSON.parse(JSON.stringify(nowupdate))
+      let dataIndex = []
+      for await (let item of retinfo.folder_info.gitLog){
+        let info2 = item.split(' ')
+        info2.splice(0,1)
+        let obj = {
+          git_message:info2.join(' '),
+          git_hash:item.split(' ')[0],
+        }
+        dataIndex.push(obj);
+      }
+      retinfo.dataIndex = dataIndex
+      return retinfo
     }
   }
 
