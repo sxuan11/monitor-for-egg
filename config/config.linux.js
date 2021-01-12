@@ -17,6 +17,12 @@ module.exports = {
       database: 'shujushouji',
     },
   },
+  cluster:{
+    listen:{
+      port:7071,
+      hostname:'0.0.0.0',
+    }
+  },
   sequelize : {
     dialect: 'mysql',
     host: '127.0.0.1',

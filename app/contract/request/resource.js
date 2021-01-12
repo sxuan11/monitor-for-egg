@@ -24,5 +24,17 @@ module.exports = {
   updateProject:{
     to_hash: { type: 'string', required: true, example: '04ece98',description:'更新的目标hash值' },
     id: { type: 'string', required: true, example: '1',description:'id' },
+  },
+  deployLog:{
+    log_action: { type: 'string', required: false, example: '04ece98',description:'日志行为' },
+    target: { type: 'string', required: false, example: '1',description:'目标项目' },
+    other_info: { type: 'object', required: false, example: '{}',description:'other_info' },
+  },
+  getDeployLog:{
+    offset: { type: 'string', required: false, example: '0',description:'当前页码' },
+    limit: { type: 'string', required: false, example: '10',description:'每页数量' },
+    startDate: { type: 'string', required: false, example: '2020-01-12',description:'开始日期' },
+    endDate: { type: 'string', required: false, example: '2020-01-12',description:'结束日期' },
+    filters: { type: 'object', required: false, example: '{}',description:'过滤参数' },
   }
 };

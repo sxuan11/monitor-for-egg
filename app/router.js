@@ -52,6 +52,6 @@ module.exports = app => {
   router.get('/deployserver/checkGitLog'  , jwt , controller.home.projectManager.deployServer.checkGitLog)
   router.post('/deployserver/updateproject'  , jwt , controller.home.projectManager.deployServer.updateproject)
   router.post('/logdeploy/addLog'  , jwt , controller.home.projectManager.deployLog.addLog)
-  router.get('/logdeploy/getLog'  , jwt , controller.home.projectManager.deployLog.getLog)
+  router.post('/logdeploy/getLog'  , jwt , controller.home.projectManager.deployLog.getLog)
 
 };

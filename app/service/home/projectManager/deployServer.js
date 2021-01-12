@@ -102,6 +102,7 @@ class DeployServer extends Service {
       await execSync(`git clone -b ${newInfo.git_branch} ${newInfo.git_url}`,{cwd:newInfo.folder_path})
       await fs.renameSync(`${newInfo.folder_path}\\${newInfo.git_name}`,`${newInfo.folder_path}\\use_check_dont_delete`)
     }
+    await execSync('git pull',{cwd:newInfo.folder_path+'\\'+'use_check_dont_delete'})
     let log = await execSync('git log --oneline',{cwd:newInfo.folder_path+'\\'+'use_check_dont_delete'}).toString().split('\n')
     let dataIndex = []
     for await (let item of log){
@@ -199,7 +200,6 @@ class DeployServer extends Service {
       return retinfo
     }
   }
-
 
 }
 
