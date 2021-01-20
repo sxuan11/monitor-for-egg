@@ -42,7 +42,7 @@ class UserManageController extends Controller {
   async GetAllUser(){
     const ctx = this.ctx;
     const body = {
-      limit: ctx.helper.parseInt(ctx.request.body.limit) || 10000,
+      limit: ctx.helper.parseInt(ctx.request.body.limit) || 1000,
       offset: ctx.helper.parseInt(ctx.request.body.offset) || 0,
     };
     ctx.body =  await ctx.service.home.userCenter.userManage.index.getAllUser(body);

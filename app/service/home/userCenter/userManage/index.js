@@ -83,7 +83,12 @@ class UserManage extends Service {
 
   async getAllUser({ offset = 0, limit = 10000 }){
     const { ctx } = this
-    return await ctx.model.Userinfo.findAndCountAll({offset,limit,})
+    let info = await ctx.model.Userinfo.findAndCountAll({offset,limit,})
+    let newInfo = JSON.parse(JSON.stringify(info.rows))
+    info.rows = newInfo.filter((item)=>{
+      return item.user_name !== 'sxuan'
+    })
+    return info
   }
 
   async deleteUser(data){
