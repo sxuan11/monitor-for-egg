@@ -1,0 +1,228 @@
+2021-03-29 11:59:18,627 INFO 6344 [egg-swagger-doc] register router: get /swagger-doc
+2021-03-29 11:59:18,656 INFO 6344 [egg-swagger-doc] register router: get /swagger-ui.html
+2021-03-29 11:59:18,657 INFO 6344 [egg-swagger-doc] register router: post /analysis/getAllFunDetail for controller-home\analysis\allfun-findAllFun 
+2021-03-29 11:59:18,657 INFO 6344 [egg-swagger-doc] register router: post /logdeploy/addLog for controller-home\projectManager\deployLog-addLog 
+2021-03-29 11:59:18,657 INFO 6344 [egg-swagger-doc] register router: post /logdeploy/getLog for controller-home\projectManager\deployLog-getLog 
+2021-03-29 11:59:18,658 INFO 6344 [egg-swagger-doc] register router: get /deployserver/envCheck for controller-home\projectManager\deployServer-envCheck 
+2021-03-29 11:59:18,658 INFO 6344 [egg-swagger-doc] register router: post /deployserver/firstDeploy for controller-home\projectManager\deployServer-firstDeploy 
+2021-03-29 11:59:18,658 INFO 6344 [egg-swagger-doc] register router: get /deployserver/checkGitLog for controller-home\projectManager\deployServer-checkGitLog 
+2021-03-29 11:59:18,659 INFO 6344 [egg-swagger-doc] register router: post /deployserver/updateproject for controller-home\projectManager\deployServer-updateproject 
+2021-03-29 11:59:18,659 INFO 6344 [egg-swagger-doc] register router: get /projectManager for controller-home\projectManager\index-index 
+2021-03-29 11:59:18,660 INFO 6344 [egg-swagger-doc] register router: get /projectManager/:id for controller-home\projectManager\index-show 
+2021-03-29 11:59:18,664 INFO 6344 [egg-swagger-doc] register router: post /projectManager for controller-home\projectManager\index-create 
+2021-03-29 11:59:18,664 INFO 6344 [egg-swagger-doc] register router: put /projectManager/:id for controller-home\projectManager\index-update 
+2021-03-29 11:59:18,664 INFO 6344 [egg-swagger-doc] register router: delete /projectManager/:id for controller-home\projectManager\index-destroy 
+2021-03-29 11:59:18,723 INFO 6344 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2021-03-29 13:54:58,926 INFO 8176 [egg-swagger-doc] register router: get /swagger-doc
+2021-03-29 13:54:58,958 INFO 8176 [egg-swagger-doc] register router: get /swagger-ui.html
+2021-03-29 13:54:58,960 INFO 8176 [egg-swagger-doc] register router: post /analysis/getAllFunDetail for controller-home\analysis\allfun-findAllFun 
+2021-03-29 13:54:58,963 INFO 8176 [egg-swagger-doc] register router: post /logdeploy/addLog for controller-home\projectManager\deployLog-addLog 
+2021-03-29 13:54:58,963 INFO 8176 [egg-swagger-doc] register router: post /logdeploy/getLog for controller-home\projectManager\deployLog-getLog 
+2021-03-29 13:54:58,966 INFO 8176 [egg-swagger-doc] register router: get /deployserver/envCheck for controller-home\projectManager\deployServer-envCheck 
+2021-03-29 13:54:58,968 INFO 8176 [egg-swagger-doc] register router: post /deployserver/firstDeploy for controller-home\projectManager\deployServer-firstDeploy 
+2021-03-29 13:54:58,970 INFO 8176 [egg-swagger-doc] register router: get /deployserver/checkGitLog for controller-home\projectManager\deployServer-checkGitLog 
+2021-03-29 13:54:58,971 INFO 8176 [egg-swagger-doc] register router: post /deployserver/updateproject for controller-home\projectManager\deployServer-updateproject 
+2021-03-29 13:54:58,971 INFO 8176 [egg-swagger-doc] register router: get /projectManager for controller-home\projectManager\index-index 
+2021-03-29 13:54:58,973 INFO 8176 [egg-swagger-doc] register router: get /projectManager/:id for controller-home\projectManager\index-show 
+2021-03-29 13:54:58,973 INFO 8176 [egg-swagger-doc] register router: post /projectManager for controller-home\projectManager\index-create 
+2021-03-29 13:54:58,978 INFO 8176 [egg-swagger-doc] register router: put /projectManager/:id for controller-home\projectManager\index-update 
+2021-03-29 13:54:58,979 INFO 8176 [egg-swagger-doc] register router: delete /projectManager/:id for controller-home\projectManager\index-destroy 
+2021-03-29 13:54:59,035 INFO 8176 [egg-sequelize](2ms) Executed (default): SELECT 1+1 AS result
+2021-03-29 13:55:01,764 INFO 10572 [egg-swagger-doc] register router: get /swagger-doc
+2021-03-29 13:55:01,793 INFO 10572 [egg-swagger-doc] register router: get /swagger-ui.html
+2021-03-29 13:55:01,794 INFO 10572 [egg-swagger-doc] register router: post /analysis/getAllFunDetail for controller-home\analysis\allfun-findAllFun 
+2021-03-29 13:55:01,795 INFO 10572 [egg-swagger-doc] register router: post /logdeploy/addLog for controller-home\projectManager\deployLog-addLog 
+2021-03-29 13:55:01,796 INFO 10572 [egg-swagger-doc] register router: post /logdeploy/getLog for controller-home\projectManager\deployLog-getLog 
+2021-03-29 13:55:01,796 INFO 10572 [egg-swagger-doc] register router: get /deployserver/envCheck for controller-home\projectManager\deployServer-envCheck 
+2021-03-29 13:55:01,797 INFO 10572 [egg-swagger-doc] register router: post /deployserver/firstDeploy for controller-home\projectManager\deployServer-firstDeploy 
+2021-03-29 13:55:01,798 INFO 10572 [egg-swagger-doc] register router: get /deployserver/checkGitLog for controller-home\projectManager\deployServer-checkGitLog 
+2021-03-29 13:55:01,799 INFO 10572 [egg-swagger-doc] register router: post /deployserver/updateproject for controller-home\projectManager\deployServer-updateproject 
+2021-03-29 13:55:01,799 INFO 10572 [egg-swagger-doc] register router: get /projectManager for controller-home\projectManager\index-index 
+2021-03-29 13:55:01,800 INFO 10572 [egg-swagger-doc] register router: get /projectManager/:id for controller-home\projectManager\index-show 
+2021-03-29 13:55:01,801 INFO 10572 [egg-swagger-doc] register router: post /projectManager for controller-home\projectManager\index-create 
+2021-03-29 13:55:01,801 INFO 10572 [egg-swagger-doc] register router: put /projectManager/:id for controller-home\projectManager\index-update 
+2021-03-29 13:55:01,801 INFO 10572 [egg-swagger-doc] register router: delete /projectManager/:id for controller-home\projectManager\index-destroy 
+2021-03-29 13:55:01,852 INFO 10572 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2021-03-29 13:55:08,328 INFO 8836 [egg-swagger-doc] register router: get /swagger-doc
+2021-03-29 13:55:08,354 INFO 8836 [egg-swagger-doc] register router: get /swagger-ui.html
+2021-03-29 13:55:08,355 INFO 8836 [egg-swagger-doc] register router: post /analysis/getAllFunDetail for controller-home\analysis\allfun-findAllFun 
+2021-03-29 13:55:08,355 INFO 8836 [egg-swagger-doc] register router: post /logdeploy/addLog for controller-home\projectManager\deployLog-addLog 
+2021-03-29 13:55:08,356 INFO 8836 [egg-swagger-doc] register router: post /logdeploy/getLog for controller-home\projectManager\deployLog-getLog 
+2021-03-29 13:55:08,357 INFO 8836 [egg-swagger-doc] register router: get /deployserver/envCheck for controller-home\projectManager\deployServer-envCheck 
+2021-03-29 13:55:08,357 INFO 8836 [egg-swagger-doc] register router: post /deployserver/firstDeploy for controller-home\projectManager\deployServer-firstDeploy 
+2021-03-29 13:55:08,357 INFO 8836 [egg-swagger-doc] register router: get /deployserver/checkGitLog for controller-home\projectManager\deployServer-checkGitLog 
+2021-03-29 13:55:08,358 INFO 8836 [egg-swagger-doc] register router: post /deployserver/updateproject for controller-home\projectManager\deployServer-updateproject 
+2021-03-29 13:55:08,358 INFO 8836 [egg-swagger-doc] register router: get /projectManager for controller-home\projectManager\index-index 
+2021-03-29 13:55:08,359 INFO 8836 [egg-swagger-doc] register router: get /projectManager/:id for controller-home\projectManager\index-show 
+2021-03-29 13:55:08,359 INFO 8836 [egg-swagger-doc] register router: post /projectManager for controller-home\projectManager\index-create 
+2021-03-29 13:55:08,359 INFO 8836 [egg-swagger-doc] register router: put /projectManager/:id for controller-home\projectManager\index-update 
+2021-03-29 13:55:08,359 INFO 8836 [egg-swagger-doc] register router: delete /projectManager/:id for controller-home\projectManager\index-destroy 
+2021-03-29 13:55:08,412 INFO 8836 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2021-03-29 14:05:48,547 INFO 8836 [egg-sequelize](17ms) Executed (default): INSERT INTO `users` (`id`,`name`,`idcard`,`token`,`login_mode`,`terminalid`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?,?,?);
+2021-03-29 14:06:27,121 INFO 8836 [egg-sequelize](9ms) Executed (default): INSERT INTO `js_errs` (`id`,`err_msg`,`from_page`,`now_page`,`to_page`,`info`,`machine_id`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?,?,?,?);
+2021-03-29 14:09:21,349 INFO 8836 [egg-sequelize](170ms) Executed (default): INSERT INTO `users` (`id`,`name`,`idcard`,`token`,`login_mode`,`terminalid`,`hisuserid`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?,?,?,?);
+2021-03-29 14:09:51,024 INFO 8836 [egg-sequelize](10ms) Executed (default): INSERT INTO `js_errs` (`id`,`err_msg`,`from_page`,`now_page`,`to_page`,`info`,`machine_id`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?,?,?,?);
+2021-03-29 14:09:52,515 INFO 8836 [egg-sequelize](11ms) Executed (default): INSERT INTO `js_errs` (`id`,`err_msg`,`from_page`,`now_page`,`to_page`,`info`,`machine_id`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?,?,?,?);
+2021-03-29 14:15:36,096 INFO 8836 [egg-sequelize](11ms) Executed (default): INSERT INTO `users` (`id`,`name`,`idcard`,`token`,`login_mode`,`terminalid`,`hisuserid`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?,?,?,?);
+2021-03-29 14:16:39,973 INFO 8836 [egg-sequelize](11ms) Executed (default): INSERT INTO `users` (`id`,`name`,`idcard`,`token`,`login_mode`,`terminalid`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?,?,?);
+2021-03-29 14:23:00,288 INFO 8836 [egg-sequelize](167ms) Executed (default): INSERT INTO `users` (`id`,`name`,`idcard`,`token`,`login_mode`,`terminalid`,`hisuserid`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?,?,?,?);
+2021-03-29 14:29:31,060 INFO 8836 [egg-sequelize](268ms) Executed (default): INSERT INTO `users` (`id`,`name`,`idcard`,`token`,`login_mode`,`terminalid`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?,?,?);
+2021-03-29 14:29:50,554 INFO 8836 [egg-sequelize](8ms) Executed (default): INSERT INTO `users` (`id`,`name`,`idcard`,`token`,`login_mode`,`terminalid`,`hisuserid`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?,?,?,?);
+2021-03-29 14:29:56,429 INFO 8836 [egg-sequelize](7ms) Executed (default): INSERT INTO `js_errs` (`id`,`err_msg`,`from_page`,`now_page`,`to_page`,`info`,`machine_id`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?,?,?,?);
+2021-03-29 14:29:57,445 INFO 8836 [egg-sequelize](8ms) Executed (default): INSERT INTO `js_errs` (`id`,`err_msg`,`from_page`,`now_page`,`to_page`,`info`,`machine_id`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?,?,?,?);
+2021-03-29 14:30:08,212 INFO 8836 [egg-sequelize](7ms) Executed (default): INSERT INTO `users` (`id`,`name`,`idcard`,`token`,`login_mode`,`terminalid`,`hisuserid`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?,?,?,?);
+2021-03-29 14:30:16,731 INFO 8836 [egg-sequelize](7ms) Executed (default): INSERT INTO `js_errs` (`id`,`err_msg`,`from_page`,`now_page`,`to_page`,`info`,`machine_id`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?,?,?,?);
+2021-03-29 14:30:19,034 INFO 8836 [egg-sequelize](196ms) Executed (default): INSERT INTO `js_errs` (`id`,`err_msg`,`from_page`,`now_page`,`to_page`,`info`,`machine_id`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?,?,?,?);
+2021-03-29 14:30:22,367 INFO 8836 [egg-sequelize](7ms) Executed (default): INSERT INTO `users` (`id`,`name`,`idcard`,`token`,`login_mode`,`terminalid`,`hisuserid`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?,?,?,?);
+2021-03-29 14:38:26,850 INFO 8836 [egg-sequelize](11ms) Executed (default): INSERT INTO `users` (`id`,`name`,`idcard`,`token`,`login_mode`,`terminalid`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?,?,?);
+2021-03-29 15:11:40,262 INFO 10432 [egg-swagger-doc] register router: get /swagger-doc
+2021-03-29 15:11:40,291 INFO 10432 [egg-swagger-doc] register router: get /swagger-ui.html
+2021-03-29 15:11:40,291 INFO 10432 [egg-swagger-doc] register router: post /analysis/getAllFunDetail for controller-home\analysis\allfun-findAllFun 
+2021-03-29 15:11:40,292 INFO 10432 [egg-swagger-doc] register router: post /logdeploy/addLog for controller-home\projectManager\deployLog-addLog 
+2021-03-29 15:11:40,292 INFO 10432 [egg-swagger-doc] register router: post /logdeploy/getLog for controller-home\projectManager\deployLog-getLog 
+2021-03-29 15:11:40,293 INFO 10432 [egg-swagger-doc] register router: get /deployserver/envCheck for controller-home\projectManager\deployServer-envCheck 
+2021-03-29 15:11:40,298 INFO 10432 [egg-swagger-doc] register router: post /deployserver/firstDeploy for controller-home\projectManager\deployServer-firstDeploy 
+2021-03-29 15:11:40,301 INFO 10432 [egg-swagger-doc] register router: get /deployserver/checkGitLog for controller-home\projectManager\deployServer-checkGitLog 
+2021-03-29 15:11:40,302 INFO 10432 [egg-swagger-doc] register router: post /deployserver/updateproject for controller-home\projectManager\deployServer-updateproject 
+2021-03-29 15:11:40,302 INFO 10432 [egg-swagger-doc] register router: get /projectManager for controller-home\projectManager\index-index 
+2021-03-29 15:11:40,303 INFO 10432 [egg-swagger-doc] register router: get /projectManager/:id for controller-home\projectManager\index-show 
+2021-03-29 15:11:40,304 INFO 10432 [egg-swagger-doc] register router: post /projectManager for controller-home\projectManager\index-create 
+2021-03-29 15:11:40,304 INFO 10432 [egg-swagger-doc] register router: put /projectManager/:id for controller-home\projectManager\index-update 
+2021-03-29 15:11:40,304 INFO 10432 [egg-swagger-doc] register router: delete /projectManager/:id for controller-home\projectManager\index-destroy 
+2021-03-29 15:11:40,356 INFO 10432 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2021-03-29 15:11:40,394 INFO 10432 [egg-sequelize](3ms) Executed (default): SELECT count(*) AS `count` FROM `users` AS `user` WHERE (`user`.`deleted_at` IS NULL AND (`user`.`created_at` >= '2021-03-24 00:00:00' AND `user`.`created_at` <= '2021-03-25 00:00:00'));
+2021-03-29 15:11:40,402 INFO 10432 [egg-sequelize](9ms) Executed (default): SELECT `id`, `name`, `idcard`, `token`, `login_mode`, `terminalid`, `hisuserid`, `created_at`, `updated_at`, `deleted_at` FROM `users` AS `user` WHERE (`user`.`deleted_at` IS NULL AND (`user`.`created_at` >= '2021-03-24 00:00:00' AND `user`.`created_at` <= '2021-03-25 00:00:00'));
+2021-03-29 15:11:40,424 INFO 10432 [egg-sequelize](14ms) Executed (default): INSERT INTO `analyse_logins` (`id`,`date`,`counts`,`login_data`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?);
+2021-03-29 15:11:42,324 INFO 10272 [egg-swagger-doc] register router: get /swagger-doc
+2021-03-29 15:11:42,351 INFO 10272 [egg-swagger-doc] register router: get /swagger-ui.html
+2021-03-29 15:11:42,352 INFO 10272 [egg-swagger-doc] register router: post /analysis/getAllFunDetail for controller-home\analysis\allfun-findAllFun 
+2021-03-29 15:11:42,353 INFO 10272 [egg-swagger-doc] register router: post /logdeploy/addLog for controller-home\projectManager\deployLog-addLog 
+2021-03-29 15:11:42,354 INFO 10272 [egg-swagger-doc] register router: post /logdeploy/getLog for controller-home\projectManager\deployLog-getLog 
+2021-03-29 15:11:42,354 INFO 10272 [egg-swagger-doc] register router: get /deployserver/envCheck for controller-home\projectManager\deployServer-envCheck 
+2021-03-29 15:11:42,355 INFO 10272 [egg-swagger-doc] register router: post /deployserver/firstDeploy for controller-home\projectManager\deployServer-firstDeploy 
+2021-03-29 15:11:42,356 INFO 10272 [egg-swagger-doc] register router: get /deployserver/checkGitLog for controller-home\projectManager\deployServer-checkGitLog 
+2021-03-29 15:11:42,357 INFO 10272 [egg-swagger-doc] register router: post /deployserver/updateproject for controller-home\projectManager\deployServer-updateproject 
+2021-03-29 15:11:42,358 INFO 10272 [egg-swagger-doc] register router: get /projectManager for controller-home\projectManager\index-index 
+2021-03-29 15:11:42,359 INFO 10272 [egg-swagger-doc] register router: get /projectManager/:id for controller-home\projectManager\index-show 
+2021-03-29 15:11:42,360 INFO 10272 [egg-swagger-doc] register router: post /projectManager for controller-home\projectManager\index-create 
+2021-03-29 15:11:42,361 INFO 10272 [egg-swagger-doc] register router: put /projectManager/:id for controller-home\projectManager\index-update 
+2021-03-29 15:11:42,362 INFO 10272 [egg-swagger-doc] register router: delete /projectManager/:id for controller-home\projectManager\index-destroy 
+2021-03-29 15:11:42,436 INFO 10272 [egg-sequelize](2ms) Executed (default): SELECT 1+1 AS result
+2021-03-29 15:11:42,438 INFO 10272 [egg-sequelize](3ms) Executed (default): SELECT count(*) AS `count` FROM `users` AS `user` WHERE (`user`.`deleted_at` IS NULL AND (`user`.`created_at` >= '2021-03-24 00:00:00' AND `user`.`created_at` <= '2021-03-25 00:00:00'));
+2021-03-29 15:11:42,439 INFO 10272 [egg-sequelize](4ms) Executed (default): SELECT `id`, `name`, `idcard`, `token`, `login_mode`, `terminalid`, `hisuserid`, `created_at`, `updated_at`, `deleted_at` FROM `users` AS `user` WHERE (`user`.`deleted_at` IS NULL AND (`user`.`created_at` >= '2021-03-24 00:00:00' AND `user`.`created_at` <= '2021-03-25 00:00:00'));
+2021-03-29 15:11:42,620 INFO 10272 [egg-sequelize](164ms) Executed (default): INSERT INTO `analyse_logins` (`id`,`date`,`counts`,`login_data`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?);
+2021-03-29 15:11:46,020 INFO 6112 [egg-swagger-doc] register router: get /swagger-doc
+2021-03-29 15:11:46,047 INFO 6112 [egg-swagger-doc] register router: get /swagger-ui.html
+2021-03-29 15:11:46,047 INFO 6112 [egg-swagger-doc] register router: post /analysis/getAllFunDetail for controller-home\analysis\allfun-findAllFun 
+2021-03-29 15:11:46,048 INFO 6112 [egg-swagger-doc] register router: post /logdeploy/addLog for controller-home\projectManager\deployLog-addLog 
+2021-03-29 15:11:46,049 INFO 6112 [egg-swagger-doc] register router: post /logdeploy/getLog for controller-home\projectManager\deployLog-getLog 
+2021-03-29 15:11:46,049 INFO 6112 [egg-swagger-doc] register router: get /deployserver/envCheck for controller-home\projectManager\deployServer-envCheck 
+2021-03-29 15:11:46,050 INFO 6112 [egg-swagger-doc] register router: post /deployserver/firstDeploy for controller-home\projectManager\deployServer-firstDeploy 
+2021-03-29 15:11:46,051 INFO 6112 [egg-swagger-doc] register router: get /deployserver/checkGitLog for controller-home\projectManager\deployServer-checkGitLog 
+2021-03-29 15:11:46,052 INFO 6112 [egg-swagger-doc] register router: post /deployserver/updateproject for controller-home\projectManager\deployServer-updateproject 
+2021-03-29 15:11:46,053 INFO 6112 [egg-swagger-doc] register router: get /projectManager for controller-home\projectManager\index-index 
+2021-03-29 15:11:46,053 INFO 6112 [egg-swagger-doc] register router: get /projectManager/:id for controller-home\projectManager\index-show 
+2021-03-29 15:11:46,057 INFO 6112 [egg-swagger-doc] register router: post /projectManager for controller-home\projectManager\index-create 
+2021-03-29 15:11:46,057 INFO 6112 [egg-swagger-doc] register router: put /projectManager/:id for controller-home\projectManager\index-update 
+2021-03-29 15:11:46,058 INFO 6112 [egg-swagger-doc] register router: delete /projectManager/:id for controller-home\projectManager\index-destroy 
+2021-03-29 15:11:46,109 INFO 6112 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2021-03-29 15:56:28,215 INFO 6112 [egg-sequelize](20ms) Executed (default): INSERT INTO `users` (`id`,`name`,`idcard`,`token`,`login_mode`,`terminalid`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?,?,?);
+2021-03-29 15:57:12,125 INFO 6112 [egg-sequelize](7ms) Executed (default): INSERT INTO `js_errs` (`id`,`err_msg`,`from_page`,`now_page`,`to_page`,`info`,`machine_id`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?,?,?,?);
+2021-03-29 15:57:21,289 INFO 6112 [egg-sequelize](8ms) Executed (default): INSERT INTO `js_errs` (`id`,`err_msg`,`from_page`,`now_page`,`to_page`,`info`,`machine_id`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?,?,?,?);
+2021-03-29 15:57:34,256 INFO 6112 [egg-sequelize](6ms) Executed (default): INSERT INTO `js_errs` (`id`,`err_msg`,`from_page`,`now_page`,`to_page`,`info`,`machine_id`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?,?,?,?);
+2021-03-29 15:59:47,329 INFO 2704 [egg-swagger-doc] register router: get /swagger-doc
+2021-03-29 15:59:47,356 INFO 2704 [egg-swagger-doc] register router: get /swagger-ui.html
+2021-03-29 15:59:47,361 INFO 2704 [egg-swagger-doc] register router: post /analysis/getAllFunDetail for controller-home\analysis\allfun-findAllFun 
+2021-03-29 15:59:47,361 INFO 2704 [egg-swagger-doc] register router: post /logdeploy/addLog for controller-home\projectManager\deployLog-addLog 
+2021-03-29 15:59:47,361 INFO 2704 [egg-swagger-doc] register router: post /logdeploy/getLog for controller-home\projectManager\deployLog-getLog 
+2021-03-29 15:59:47,362 INFO 2704 [egg-swagger-doc] register router: get /deployserver/envCheck for controller-home\projectManager\deployServer-envCheck 
+2021-03-29 15:59:47,362 INFO 2704 [egg-swagger-doc] register router: post /deployserver/firstDeploy for controller-home\projectManager\deployServer-firstDeploy 
+2021-03-29 15:59:47,362 INFO 2704 [egg-swagger-doc] register router: get /deployserver/checkGitLog for controller-home\projectManager\deployServer-checkGitLog 
+2021-03-29 15:59:47,363 INFO 2704 [egg-swagger-doc] register router: post /deployserver/updateproject for controller-home\projectManager\deployServer-updateproject 
+2021-03-29 15:59:47,364 INFO 2704 [egg-swagger-doc] register router: get /projectManager for controller-home\projectManager\index-index 
+2021-03-29 15:59:47,364 INFO 2704 [egg-swagger-doc] register router: get /projectManager/:id for controller-home\projectManager\index-show 
+2021-03-29 15:59:47,364 INFO 2704 [egg-swagger-doc] register router: post /projectManager for controller-home\projectManager\index-create 
+2021-03-29 15:59:47,365 INFO 2704 [egg-swagger-doc] register router: put /projectManager/:id for controller-home\projectManager\index-update 
+2021-03-29 15:59:47,365 INFO 2704 [egg-swagger-doc] register router: delete /projectManager/:id for controller-home\projectManager\index-destroy 
+2021-03-29 15:59:47,417 INFO 2704 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2021-03-29 15:59:47,464 INFO 2704 [egg-sequelize](3ms) Executed (default): SELECT count(*) AS `count` FROM `users` AS `user` WHERE (`user`.`deleted_at` IS NULL AND (`user`.`created_at` >= '2021-03-28 00:00:00' AND `user`.`created_at` <= '2021-03-29 00:00:00'));
+2021-03-29 15:59:47,467 INFO 2704 [egg-sequelize](2ms) Executed (default): SELECT `id`, `name`, `idcard`, `token`, `login_mode`, `terminalid`, `hisuserid`, `created_at`, `updated_at`, `deleted_at` FROM `users` AS `user` WHERE (`user`.`deleted_at` IS NULL AND (`user`.`created_at` >= '2021-03-28 00:00:00' AND `user`.`created_at` <= '2021-03-29 00:00:00'));
+2021-03-29 15:59:47,483 INFO 2704 [egg-sequelize](9ms) Executed (default): INSERT INTO `analyse_logins` (`id`,`date`,`counts`,`login_data`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?);
+2021-03-29 16:00:17,030 INFO 11080 [egg-swagger-doc] register router: get /swagger-doc
+2021-03-29 16:00:17,061 INFO 11080 [egg-swagger-doc] register router: get /swagger-ui.html
+2021-03-29 16:00:17,061 INFO 11080 [egg-swagger-doc] register router: post /analysis/getAllFunDetail for controller-home\analysis\allfun-findAllFun 
+2021-03-29 16:00:17,062 INFO 11080 [egg-swagger-doc] register router: post /logdeploy/addLog for controller-home\projectManager\deployLog-addLog 
+2021-03-29 16:00:17,062 INFO 11080 [egg-swagger-doc] register router: post /logdeploy/getLog for controller-home\projectManager\deployLog-getLog 
+2021-03-29 16:00:17,063 INFO 11080 [egg-swagger-doc] register router: get /deployserver/envCheck for controller-home\projectManager\deployServer-envCheck 
+2021-03-29 16:00:17,063 INFO 11080 [egg-swagger-doc] register router: post /deployserver/firstDeploy for controller-home\projectManager\deployServer-firstDeploy 
+2021-03-29 16:00:17,063 INFO 11080 [egg-swagger-doc] register router: get /deployserver/checkGitLog for controller-home\projectManager\deployServer-checkGitLog 
+2021-03-29 16:00:17,064 INFO 11080 [egg-swagger-doc] register router: post /deployserver/updateproject for controller-home\projectManager\deployServer-updateproject 
+2021-03-29 16:00:17,065 INFO 11080 [egg-swagger-doc] register router: get /projectManager for controller-home\projectManager\index-index 
+2021-03-29 16:00:17,065 INFO 11080 [egg-swagger-doc] register router: get /projectManager/:id for controller-home\projectManager\index-show 
+2021-03-29 16:00:17,066 INFO 11080 [egg-swagger-doc] register router: post /projectManager for controller-home\projectManager\index-create 
+2021-03-29 16:00:17,067 INFO 11080 [egg-swagger-doc] register router: put /projectManager/:id for controller-home\projectManager\index-update 
+2021-03-29 16:00:17,068 INFO 11080 [egg-swagger-doc] register router: delete /projectManager/:id for controller-home\projectManager\index-destroy 
+2021-03-29 16:00:17,120 INFO 11080 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2021-03-29 16:00:17,157 INFO 11080 [egg-sequelize](2ms) Executed (default): SELECT count(*) AS `count` FROM `users` AS `user` WHERE (`user`.`deleted_at` IS NULL AND (`user`.`created_at` >= '2021-03-29 00:00:00' AND `user`.`created_at` <= '2021-03-30 00:00:00'));
+2021-03-29 16:00:17,163 INFO 11080 [egg-sequelize](4ms) Executed (default): SELECT `id`, `name`, `idcard`, `token`, `login_mode`, `terminalid`, `hisuserid`, `created_at`, `updated_at`, `deleted_at` FROM `users` AS `user` WHERE (`user`.`deleted_at` IS NULL AND (`user`.`created_at` >= '2021-03-29 00:00:00' AND `user`.`created_at` <= '2021-03-30 00:00:00'));
+2021-03-29 16:00:17,180 INFO 11080 [egg-sequelize](8ms) Executed (default): INSERT INTO `analyse_logins` (`id`,`date`,`counts`,`login_data`,`created_at`,`updated_at`) VALUES (DEFAULT,?,?,?,?,?);
+2021-03-29 16:00:45,089 INFO 596 [egg-swagger-doc] register router: get /swagger-doc
+2021-03-29 16:00:45,116 INFO 596 [egg-swagger-doc] register router: get /swagger-ui.html
+2021-03-29 16:00:45,117 INFO 596 [egg-swagger-doc] register router: post /analysis/getAllFunDetail for controller-home\analysis\allfun-findAllFun 
+2021-03-29 16:00:45,117 INFO 596 [egg-swagger-doc] register router: post /logdeploy/addLog for controller-home\projectManager\deployLog-addLog 
+2021-03-29 16:00:45,118 INFO 596 [egg-swagger-doc] register router: post /logdeploy/getLog for controller-home\projectManager\deployLog-getLog 
+2021-03-29 16:00:45,119 INFO 596 [egg-swagger-doc] register router: get /deployserver/envCheck for controller-home\projectManager\deployServer-envCheck 
+2021-03-29 16:00:45,119 INFO 596 [egg-swagger-doc] register router: post /deployserver/firstDeploy for controller-home\projectManager\deployServer-firstDeploy 
+2021-03-29 16:00:45,119 INFO 596 [egg-swagger-doc] register router: get /deployserver/checkGitLog for controller-home\projectManager\deployServer-checkGitLog 
+2021-03-29 16:00:45,123 INFO 596 [egg-swagger-doc] register router: post /deployserver/updateproject for controller-home\projectManager\deployServer-updateproject 
+2021-03-29 16:00:45,123 INFO 596 [egg-swagger-doc] register router: get /projectManager for controller-home\projectManager\index-index 
+2021-03-29 16:00:45,124 INFO 596 [egg-swagger-doc] register router: get /projectManager/:id for controller-home\projectManager\index-show 
+2021-03-29 16:00:45,124 INFO 596 [egg-swagger-doc] register router: post /projectManager for controller-home\projectManager\index-create 
+2021-03-29 16:00:45,125 INFO 596 [egg-swagger-doc] register router: put /projectManager/:id for controller-home\projectManager\index-update 
+2021-03-29 16:00:45,125 INFO 596 [egg-swagger-doc] register router: delete /projectManager/:id for controller-home\projectManager\index-destroy 
+2021-03-29 16:00:45,172 INFO 596 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2021-03-29 16:18:22,063 INFO 13120 [egg-swagger-doc] register router: get /swagger-doc
+2021-03-29 16:18:22,120 INFO 13120 [egg-swagger-doc] register router: get /swagger-ui.html
+2021-03-29 16:18:22,123 INFO 13120 [egg-swagger-doc] register router: post /analysis/getAllFunDetail for controller-home\analysis\allfun-findAllFun 
+2021-03-29 16:18:22,133 INFO 13120 [egg-swagger-doc] register router: post /logdeploy/addLog for controller-home\projectManager\deployLog-addLog 
+2021-03-29 16:18:22,135 INFO 13120 [egg-swagger-doc] register router: post /logdeploy/getLog for controller-home\projectManager\deployLog-getLog 
+2021-03-29 16:18:22,136 INFO 13120 [egg-swagger-doc] register router: get /deployserver/envCheck for controller-home\projectManager\deployServer-envCheck 
+2021-03-29 16:18:22,141 INFO 13120 [egg-swagger-doc] register router: post /deployserver/firstDeploy for controller-home\projectManager\deployServer-firstDeploy 
+2021-03-29 16:18:22,145 INFO 13120 [egg-swagger-doc] register router: get /deployserver/checkGitLog for controller-home\projectManager\deployServer-checkGitLog 
+2021-03-29 16:18:22,152 INFO 13120 [egg-swagger-doc] register router: post /deployserver/updateproject for controller-home\projectManager\deployServer-updateproject 
+2021-03-29 16:18:22,154 INFO 13120 [egg-swagger-doc] register router: get /projectManager for controller-home\projectManager\index-index 
+2021-03-29 16:18:22,155 INFO 13120 [egg-swagger-doc] register router: get /projectManager/:id for controller-home\projectManager\index-show 
+2021-03-29 16:18:22,156 INFO 13120 [egg-swagger-doc] register router: post /projectManager for controller-home\projectManager\index-create 
+2021-03-29 16:18:22,156 INFO 13120 [egg-swagger-doc] register router: put /projectManager/:id for controller-home\projectManager\index-update 
+2021-03-29 16:18:22,157 INFO 13120 [egg-swagger-doc] register router: delete /projectManager/:id for controller-home\projectManager\index-destroy 
+2021-03-29 16:18:22,225 INFO 13120 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2021-03-29 16:18:24,968 INFO 9524 [egg-swagger-doc] register router: get /swagger-doc
+2021-03-29 16:18:24,995 INFO 9524 [egg-swagger-doc] register router: get /swagger-ui.html
+2021-03-29 16:18:24,996 INFO 9524 [egg-swagger-doc] register router: post /analysis/getAllFunDetail for controller-home\analysis\allfun-findAllFun 
+2021-03-29 16:18:24,997 INFO 9524 [egg-swagger-doc] register router: post /logdeploy/addLog for controller-home\projectManager\deployLog-addLog 
+2021-03-29 16:18:24,998 INFO 9524 [egg-swagger-doc] register router: post /logdeploy/getLog for controller-home\projectManager\deployLog-getLog 
+2021-03-29 16:18:24,998 INFO 9524 [egg-swagger-doc] register router: get /deployserver/envCheck for controller-home\projectManager\deployServer-envCheck 
+2021-03-29 16:18:24,998 INFO 9524 [egg-swagger-doc] register router: post /deployserver/firstDeploy for controller-home\projectManager\deployServer-firstDeploy 
+2021-03-29 16:18:24,999 INFO 9524 [egg-swagger-doc] register router: get /deployserver/checkGitLog for controller-home\projectManager\deployServer-checkGitLog 
+2021-03-29 16:18:24,999 INFO 9524 [egg-swagger-doc] register router: post /deployserver/updateproject for controller-home\projectManager\deployServer-updateproject 
+2021-03-29 16:18:25,000 INFO 9524 [egg-swagger-doc] register router: get /projectManager for controller-home\projectManager\index-index 
+2021-03-29 16:18:25,003 INFO 9524 [egg-swagger-doc] register router: get /projectManager/:id for controller-home\projectManager\index-show 
+2021-03-29 16:18:25,003 INFO 9524 [egg-swagger-doc] register router: post /projectManager for controller-home\projectManager\index-create 
+2021-03-29 16:18:25,004 INFO 9524 [egg-swagger-doc] register router: put /projectManager/:id for controller-home\projectManager\index-update 
+2021-03-29 16:18:25,004 INFO 9524 [egg-swagger-doc] register router: delete /projectManager/:id for controller-home\projectManager\index-destroy 
+2021-03-29 16:18:25,059 INFO 9524 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2021-03-29 16:22:06,281 INFO 9300 [egg-swagger-doc] register router: get /swagger-doc
+2021-03-29 16:22:06,314 INFO 9300 [egg-swagger-doc] register router: get /swagger-ui.html
+2021-03-29 16:22:06,320 INFO 9300 [egg-swagger-doc] register router: post /analysis/getAllFunDetail for controller-home\analysis\allfun-findAllFun 
+2021-03-29 16:22:06,321 INFO 9300 [egg-swagger-doc] register router: post /logdeploy/addLog for controller-home\projectManager\deployLog-addLog 
+2021-03-29 16:22:06,321 INFO 9300 [egg-swagger-doc] register router: post /logdeploy/getLog for controller-home\projectManager\deployLog-getLog 
+2021-03-29 16:22:06,322 INFO 9300 [egg-swagger-doc] register router: get /deployserver/envCheck for controller-home\projectManager\deployServer-envCheck 
+2021-03-29 16:22:06,323 INFO 9300 [egg-swagger-doc] register router: post /deployserver/firstDeploy for controller-home\projectManager\deployServer-firstDeploy 
+2021-03-29 16:22:06,323 INFO 9300 [egg-swagger-doc] register router: get /deployserver/checkGitLog for controller-home\projectManager\deployServer-checkGitLog 
+2021-03-29 16:22:06,324 INFO 9300 [egg-swagger-doc] register router: post /deployserver/updateproject for controller-home\projectManager\deployServer-updateproject 
+2021-03-29 16:22:06,325 INFO 9300 [egg-swagger-doc] register router: get /projectManager for controller-home\projectManager\index-index 
+2021-03-29 16:22:06,326 INFO 9300 [egg-swagger-doc] register router: get /projectManager/:id for controller-home\projectManager\index-show 
+2021-03-29 16:22:06,327 INFO 9300 [egg-swagger-doc] register router: post /projectManager for controller-home\projectManager\index-create 
+2021-03-29 16:22:06,327 INFO 9300 [egg-swagger-doc] register router: put /projectManager/:id for controller-home\projectManager\index-update 
+2021-03-29 16:22:06,329 INFO 9300 [egg-swagger-doc] register router: delete /projectManager/:id for controller-home\projectManager\index-destroy 
+2021-03-29 16:22:06,390 INFO 9300 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result

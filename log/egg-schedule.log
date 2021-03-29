@@ -1,0 +1,15 @@
+2021-03-29 11:58:06,626 INFO 10960 [egg-schedule]: register schedule D:\456\monitor-for-egg\node_modules\_egg-multipart@2.10.3@egg-multipart\app\schedule\clean_tmpdir.js
+2021-03-29 11:58:06,626 INFO 10960 [egg-schedule]: register schedule D:\456\monitor-for-egg\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\clean_log.js
+2021-03-29 11:58:06,626 INFO 10960 [egg-schedule]: register schedule D:\456\monitor-for-egg\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\rotate_by_file.js
+2021-03-29 11:58:06,626 INFO 10960 [egg-schedule]: register schedule D:\456\monitor-for-egg\app\schedule\analyse_funuse.js
+2021-03-29 11:58:06,626 INFO 10960 [egg-schedule]: register schedule D:\456\monitor-for-egg\app\schedule\analyse_login.js
+2021-03-29 11:58:39,784 INFO 10732 [egg-schedule]: register schedule D:\456\monitor-for-egg\node_modules\_egg-multipart@2.10.3@egg-multipart\app\schedule\clean_tmpdir.js
+2021-03-29 11:58:39,784 INFO 10732 [egg-schedule]: register schedule D:\456\monitor-for-egg\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\clean_log.js
+2021-03-29 11:58:39,784 INFO 10732 [egg-schedule]: register schedule D:\456\monitor-for-egg\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\rotate_by_file.js
+2021-03-29 11:58:39,784 INFO 10732 [egg-schedule]: register schedule D:\456\monitor-for-egg\app\schedule\analyse_funuse.js
+2021-03-29 11:58:39,784 INFO 10732 [egg-schedule]: register schedule D:\456\monitor-for-egg\app\schedule\analyse_login.js
+2021-03-29 11:58:40,598 INFO 2788 [Timer] D:\456\monitor-for-egg\node_modules\_egg-multipart@2.10.3@egg-multipart\app\schedule\clean_tmpdir.js next time will execute after 59479404ms at 2021-03-30 04:30:00.002
+2021-03-29 11:58:40,599 INFO 2788 [Timer] D:\456\monitor-for-egg\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\clean_log.js next time will execute after 43279402ms at 2021-03-30 00:00:00.001
+2021-03-29 11:58:40,599 INFO 2788 [Timer] D:\456\monitor-for-egg\node_modules\_egg-logrotator@3.1.0@egg-logrotator\app\schedule\rotate_by_file.js next time will execute after 43280401ms at 2021-03-30 00:00:01.000
+2021-03-29 11:58:40,599 INFO 2788 [Timer] D:\456\monitor-for-egg\app\schedule\analyse_funuse.js next time will execute after 47179401ms at 2021-03-30 01:05:00.000
+2021-03-29 11:58:40,599 INFO 2788 [Timer] D:\456\monitor-for-egg\app\schedule\analyse_login.js next time will execute after 46939401ms at 2021-03-30 01:01:00.000

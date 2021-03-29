@@ -8,7 +8,7 @@ class Analyse_login extends Subscription {
   static get schedule() {
     return {
       // interval: '30m', // 1 分钟间隔
-      type: 'all', // 指定所有的 worker 都需要执行
+      type: 'worker', // 指定所有的 worker 都需要执行
       // immediate:true,
       // env: ["dev", "debug","local"],
       cron: '0 01 01 * * *',
@@ -19,8 +19,8 @@ class Analyse_login extends Subscription {
   // subscribe 是真正定时任务执行时被运行的函数
   async subscribe() {
     let { ctx , model} = this
-    let yesterday = moment().subtract(5, 'days').format('YYYY-MM-DD');
-    let today = moment().subtract(4, 'days').format('YYYY-MM-DD');
+    let yesterday = moment().subtract(1, 'days').format('YYYY-MM-DD');
+    let today = moment().subtract(0, 'days').format('YYYY-MM-DD');
     let allUser = await this.ctx.model.User.findAndCountAll({
       where: {created_at: {[Op.gte]: yesterday, [Op.lte]: today}},
     })
@@ -63,10 +63,26 @@ class Analyse_login extends Subscription {
       type: '电子健康码',
       counts: 0
     }
+    let PATIENT_ID = {
+      date:yesterday,
+      type: '登记号',
+      counts: 0
+    }
+    let MEDICAL_CARD = {
+      date:yesterday,
+      type: '就诊卡',
+      counts: 0
+    }
     for(let item of allUser.rows){
       switch (item.login_mode) {
         case "ID_CARD":
           ID_CARD.counts++;
+          break;
+        case "PATIENT_ID":
+          PATIENT_ID.counts++;
+          break;
+        case "MEDICAL_CARD":
+          MEDICAL_CARD.counts++;
           break;
         case "SOC_CARD":
           SOC_CARD.counts++;
@@ -94,7 +110,7 @@ class Analyse_login extends Subscription {
       type: '总人数',
       counts: countID_CARD.length
     }
-    allCount.column.push(all_time,all_person,ID_CARD, SOC_CARD, FACE, NUM_INPUT_IDCARD, NUM_INPUT_NUM, QR_CODE)
+    allCount.column.push(all_time,all_person,ID_CARD, SOC_CARD, FACE, NUM_INPUT_IDCARD, NUM_INPUT_NUM, QR_CODE, PATIENT_ID, MEDICAL_CARD)
     let data = {
       date:yesterday,
       login_data:allCount,
@@ -102,6 +118,7 @@ class Analyse_login extends Subscription {
     }
     await this.ctx.model.AnalyseLogins.create(data);
   }
+
 }
 
 module.exports = Analyse_login;

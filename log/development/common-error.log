@@ -1,0 +1,18 @@
+2021-03-29 13:55:06,641 ERROR 4556 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:208:20)
+errno: -4077
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 4556
+hostname: DESKTOP-82MU9NR
+
+2021-03-29 16:18:25,025 ERROR 11740 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:208:20)
+errno: -4077
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 11740
+hostname: DESKTOP-82MU9NR
+

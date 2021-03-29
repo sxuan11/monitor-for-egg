@@ -1,7 +1,6 @@
 /* eslint valid-jsdoc: "off" */
 
 'use strict';
-
 /**
  * @param {Egg.EggAppInfo} appInfo app info
  */
@@ -68,7 +67,10 @@ module.exports = appInfo => {
       jsonLimit: '1mb',
       formLimit: '1mb',
     },
-    mysql: {
+    logger :{
+      dir: `./log/${process.env.NODE_ENV}`,
+    },
+      mysql: {
       client: {
         // host
         host: '127.0.0.1',

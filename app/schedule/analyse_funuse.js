@@ -8,7 +8,7 @@ class Analyse_funuse extends Subscription {
   static get schedule() {
     return {
       // interval: '30h', // 1 分钟间隔
-      type: 'all', // 指定所有的 worker 都需要执行
+      type: 'worker', // 指定所有的 worker 都需要执行
       // immediate: true,
       // env: ["dev", "debug","local"],
       cron: '0 05 01 * * *',

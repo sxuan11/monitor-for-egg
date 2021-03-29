@@ -45,6 +45,5 @@ module.exports = {
         return next();
       }
     }
-
   }
 };
